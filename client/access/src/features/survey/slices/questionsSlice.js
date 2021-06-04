@@ -16,7 +16,7 @@ export const questionsSlice = createSlice({
 
 export const { updateQuestions } = questionsSlice.actions;
 
-/** Returns a list of questions and their type (boolean, number, or currency). */
+/** Returns a list of questions and their type (boolean, number, or currency, or multi). */
 export const selectQuestions = (state) => state.questions;
 
 export default questionsSlice.reducer;

@@ -1,3 +1,4 @@
+debug: true
 spring:
   application:
     name: maslow
@@ -72,10 +73,11 @@ maslow:
           en:
             text: Is anyone 5 years old or younger?
       IS_EMPLOYMENT_AFFECTED:
-        type: BOOLEAN
+        type: MULTI
         resources:
           en:
             text: Are you unemployed, furloughed, or working reduced hours?
+            options: [ Yeah, Nope, Sometimes, Maybe, Prefer not to answer ]
       IS_PAY_FOR_DEPENDENT_CARE:
         type: BOOLEAN
         resources:

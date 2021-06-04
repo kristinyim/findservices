@@ -78,6 +78,7 @@ describe("SurveySection", () => {
           BOOLEAN: [],
           CURRENCY: [],
           NUMBER: [],
+          MULTI: [],
         })
         .value();
 

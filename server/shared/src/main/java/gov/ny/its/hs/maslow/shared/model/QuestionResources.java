@@ -1,5 +1,6 @@
 package gov.ny.its.hs.maslow.shared.model;
 
+import java.util.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import javax.validation.constraints.*;
@@ -11,6 +12,8 @@ public class QuestionResources {
   private String text;
 
   private String hint;
+
+  private List<String> options;
 
   /**
    * Gets the display text of the question.
@@ -33,4 +36,17 @@ public class QuestionResources {
   public void setHint(String hint) {
     this.hint = hint;
   }
+
+  /**
+   * Gets the display option
+   */
+  public List<String> getOptions() {
+    return options;
+  }
+
+  /** Sets the value of {@link #getOptions()} */
+  public void setOptions(List<String> options) {
+    this.options = options;
+  }
+
 }

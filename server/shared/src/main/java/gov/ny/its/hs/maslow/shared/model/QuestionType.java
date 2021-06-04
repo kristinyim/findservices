@@ -19,4 +19,9 @@ public enum QuestionType {
    * The question response must be a non-negative integer (that is, >= 0).
    */
   NUMBER,
+
+  /**
+   * The question response must be a one of the options
+   */
+  MULTI
 }

@@ -47,6 +47,8 @@ function ReviewSection(props) {
         return item(questionKey, t("survey.question.boolean.no"));
       } else if (isNumericAndExists(responses, questionKey, type)) {
         return item(questionKey, displayNumber(questionKey));
+      } else if (isMulti(responses, questionKey, type)) {
+        return item(questionKey, responses[questionKey]);
       } else {
         return "";
       }
@@ -99,6 +101,11 @@ const isBooleanAndTrue = (responses, questionKey, type) => {
 const isBooleanAndFalse = (responses, questionKey, type) => {
   return responses[questionKey] === false && type === "BOOLEAN";
 };
+
+const isMulti = (responses, questionKey, type) => {
+  return type === "MULTI";
+};
+
 // Determines if a question is answered and has a numeric value.
 const isNumericAndExists = (responses, questionKey, type) => {
   return (type === "NUMBER" || type === "CURRENCY") && questionKey in responses;

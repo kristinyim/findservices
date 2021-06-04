@@ -142,3 +142,8 @@ This component renders questions of type "BOOLEAN" as yes/no radio buttons.
 This component renders questions of type "CURRENCY" and "NUMBER" as number
 inputs. The only difference between "CURRENCY" and "NUMBER" is whether we
 render a currency symbol in the input field.
+
+### Multiple option Question
+
+This component renders multiple choice questions. Radio buttons are configured
+using `options` parameter list of the question. Will possibly be updated to dropdown list in the future.

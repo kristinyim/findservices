@@ -197,6 +197,9 @@ function getExampleResponses(questions) {
       case "BOOLEAN": {
         return true;
       }
+      case "MULTI": {
+        return 1;
+      }
     }
   };
 
