@@ -6,5 +6,6 @@ export {
   ReportCard,
   useScrollToTop,
   ScrollToTopOnRouteChange,
+  LanguageSwitcher,
 } from "./src/components";
 export { evaluate } from "./src/services";

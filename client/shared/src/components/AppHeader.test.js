@@ -25,12 +25,13 @@ describe("app header", () => {
       expect(logo).toBeInTheDocument();
     });
 
-    it("has language selector", async () => {
-      const listbox = screen.getByRole("listbox", {
-        name: "header.languageSwitcher.label",
-      });
-      expect(listbox).toBeInTheDocument();
-    });
+    // Note: Test not updated b/c app header no longer in use
+    // it("has language selector", async () => {
+    //   const listbox = screen.getByRole("listbox", {
+    //     name: "header.languageSwitcher.label",
+    //   });
+    //   expect(listbox).toBeInTheDocument();
+    // });
 
     it("has no axe violations", async () => {
       const cut = await axe(container);

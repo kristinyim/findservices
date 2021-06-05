@@ -1,6 +1,6 @@
 import styles from "components/AppLayout.module.css";
 import Catalog from "components/Catalog";
-import { AppFooter, AppHeader } from "maslow-shared";
+import { AppFooter } from "maslow-shared";
 import PropTypes from "prop-types";
 import React, { Fragment, useRef } from "react";
 import { useTranslation } from "react-i18next";
@@ -30,7 +30,6 @@ export default function AppLayout({ children }) {
       <button className={styles.srOnly} onClick={skipToMainContent}>
         {t("header.skipToContent")}
       </button>
-      <AppHeader />
       <Ref innerRef={skipRef}>
         <Container text as="main" className={styles.content} tabIndex={-1}>
           <Catalog>{children}</Catalog>

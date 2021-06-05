@@ -47,10 +47,6 @@ describe("The standard application layout", () => {
     jest.clearAllMocks();
   });
 
-  it("has the app-wide header", () => {
-    expect(screen.getByRole("banner")).toBeInTheDocument();
-  });
-
   it("has landmark accessibility region for main", () => {
     expect(screen.getByRole("main")).toBeInTheDocument();
   });

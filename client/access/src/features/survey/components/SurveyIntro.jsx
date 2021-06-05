@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Divider, Header, Image } from "semantic-ui-react";
+import { LanguageSwitcher } from "maslow-shared";
 import markdown from "maslow-shared/src/components/Markdown.module.css";
 import checklist from "../../../resources/images/checklist.svg";
 import styles from "features/survey/components/Survey.module.css";
@@ -13,6 +14,7 @@ const SurveyIntro = () => {
 
   return (
     <Fragment>
+      <LanguageSwitcher />
       <Image
         alt=""
         aria-hidden={true}
