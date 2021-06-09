@@ -16,6 +16,7 @@ describe("summary section", () => {
           {
             SECTION_HOUSEHOLD: [
               "HOUSEHOLD_SIZE",
+              "HOUSEHOLD_TYPE",
               "ADULTS_65_PLUS",
               "CHILDREN_00_05",
               "HOUSEHOLD_INCOME",
@@ -25,6 +26,7 @@ describe("summary section", () => {
         ],
         responses: {
           HOUSEHOLD_SIZE: 4,
+          HOUSEHOLD_TYPE: 2,
           ADULTS_65_PLUS: true,
           CHILDREN_00_05: false,
           HOUSEHOLD_INCOME: 1000,
@@ -33,6 +35,10 @@ describe("summary section", () => {
         questions: {
           HOUSEHOLD_SIZE: {
             type: "NUMBER",
+          },
+          HOUSEHOLD_TYPE: {
+            // TODO: complete test for MULTI question
+            type: "MULTI",
           },
           ADULTS_65_PLUS: {
             type: "BOOLEAN",
@@ -54,6 +60,7 @@ describe("summary section", () => {
       const sectionKey = "SECTION_HOUSEHOLD";
       const questionKeys = [
         "HOUSEHOLD_SIZE",
+        "HOUSEHOLD_TYPE",
         "ADULTS_65_PLUS",
         "CHILDREN_00_05",
         "HOUSEHOLD_INCOME",

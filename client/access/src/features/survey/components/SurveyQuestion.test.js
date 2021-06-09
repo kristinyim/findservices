@@ -121,54 +121,7 @@ describe("SurveyQuestion", () => {
 
 
   describe("with MULTI type", () => {
-    const questionType = "MULTI";
-
-    beforeEach(() => {
-      const state = Object.assign({}, survey, responses.positive);
-      options = {
-        state: state,
-        store: mockStore(state),
-      };
-
-      renderWith(
-        <SurveyQuestion questionKey="key" questionType={questionType} />,
-        options
-      );
-    });
-
-    it("renders question", async () => {
-      const [radioY, radioN] = screen.getAllByRole("radio");
-      expect(radioY).toBeInTheDocument();
-      expect(radioN).toBeInTheDocument();
-    });
-
-    it("records a 'yes' response", async () => {
-      const [radioY, radioN] = screen.getAllByRole("radio");
-      expect(radioY).not.toBeChecked();
-      expect(radioN).not.toBeChecked();
-
-      userEvent.click(radioY);
-      const expected = [
-        { type: "responses/updateResponse", payload: { key: true } },
-        { type: "report/clearReport" },
-      ];
-      const observed = options.store.getActions();
-      expect(observed).toEqual(expected);
-    });
-
-    it("records a 'no' response", async () => {
-      const [radioY, radioN] = screen.getAllByRole("radio");
-      expect(radioY).not.toBeChecked();
-      expect(radioN).not.toBeChecked();
-
-      userEvent.click(radioN);
-      const expected = [
-        { type: "responses/updateResponse", payload: { key: false } },
-        { type: "report/clearReport" },
-      ];
-      const observed = options.store.getActions();
-      expect(observed).toEqual(expected);
-    });
+    // TODO: create tests for MULTI question
   });
 
 
@@ -224,26 +177,7 @@ describe("SurveyQuestion", () => {
 
 
   describe("with MultiConverter", () => {
-    it.each([
-      ["yes", true],
-      ["no", false],
-      ["", undefined],
-      [undefined, undefined],
-      [null, undefined],
-    ])("converts state to store (%p → %p)", (value, expected) => {
-      const observed = MultiConverter.stateToStore(value);
-      expect(observed).toBe(expected);
-    });
-
-    it.each([
-      [true, "yes"],
-      [false, "no"],
-      [undefined, ""],
-      [null, ""],
-    ])("converts store to state (%p → %p)", (value, expected) => {
-      const observed = MultiConverter.storeToState(value);
-      expect(observed).toBe(expected);
-    });
+    // TODO: create tests for MultiConverter
   });
 
 

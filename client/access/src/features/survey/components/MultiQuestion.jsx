@@ -4,23 +4,23 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Form, Message } from "semantic-ui-react";
 
-/**
- * Renders a question of type MULTI as an accessible radio group with options
- * for "yes" and "no". This component is intended to be used as a controlled
- * component -- that is, it requires that the parent provide values for both the
- * {@linkcode #value} and {@linkcode #onChange} props.
- */
-
+// Returns a list of options for a MULTI question
 function getOptions(t, questionKey) {
   const options = t(`catalog:${questionKey}.options`, {returnObjects: true});
   // Check if we actually have options defined
   if (options != null && typeof options === 'object') {
      return options;
   }
-  return ["bla"];
+  return ["ERROR"];
 }
 
 
+/**
+ * Renders a question of type MULTI as an accessible radio group with options
+ * loaded from catalog. This component is intended to be used as a controlled
+ * component -- that is, it requires that the parent provide values for both the
+ * {@linkcode #value} and {@linkcode #onChange} props.
+ */
 /**
  * For Dropdown UI see https://www.telerik.com/kendo-react-ui/components/dropdowns/dropdownlist/
  */
@@ -38,8 +38,8 @@ function MultiQuestion(props) {
         id={`${questionId}-${index}`}
         name={questionKey}
         label={optionLabel}
-        value={`OPT_${index+1}`}
-        checked={value === `OPT_${index+1}`}
+        value={`${index+1}`}
+        checked={value === `${index+1}`}
         onChange={onChange}
         aria-describedby={`${questionId}-hint ${questionId}-error`}
       />);

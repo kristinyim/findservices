@@ -9,6 +9,16 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { Header } from "semantic-ui-react";
 
+/** Returns the chosen option text for a MULTI question */
+function getOptionText(t, questionKey, idx) {
+  const options = t(`catalog:${questionKey}.options`, {returnObjects: true});
+  // Check if we actually have options defined
+  if (options != null && typeof options === 'object') {
+     return options[idx-1];
+  }
+  return "ERROR";
+}
+
 /** Displays the question followed by the resident's response for a specific section of questions. */
 function ReviewSection(props) {
   const { sectionKey, questionKeys } = props;
@@ -39,6 +49,8 @@ function ReviewSection(props) {
         </div>
       );
     };
+
+
     return questionKeys.map((questionKey) => {
       const type = questions[questionKey].type;
       if (isBooleanAndTrue(responses, questionKey, type)) {
@@ -48,7 +60,7 @@ function ReviewSection(props) {
       } else if (isNumericAndExists(responses, questionKey, type)) {
         return item(questionKey, displayNumber(questionKey));
       } else if (isMulti(responses, questionKey, type)) {
-        return item(questionKey, responses[questionKey]);
+        return item(questionKey, getOptionText(t, questionKey, responses[questionKey]));
       } else {
         return "";
       }

@@ -207,8 +207,13 @@ class EvaluatorInterpreter extends BaseCstVisitor {
         return sign * result;
       }
     } else if (ctx.Identifier) {
-      if (ctx.Identifier[0].image in this.responses) {
-        const result = this.responses[ctx.Identifier[0].image];
+      const name = ctx.Identifier[0].image;
+      if (name in this.responses) {
+        var result = this.responses[name];
+        if (typeof result === "string") {
+          result = parseInt(result);
+        }
+
         if (!ctx.AdditionOperator) {
           return result;
         } else {
