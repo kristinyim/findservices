@@ -201,8 +201,6 @@ describe("review page", () => {
         expect(document.body).toHaveFocus();
 
         userEvent.tab(); // Skip to main content.
-        userEvent.tab(); // NYS logo.
-        userEvent.tab(); // Language menu.
         userEvent.tab(); // First edit link.
 
         const edit = screen.getAllByRole("link", {

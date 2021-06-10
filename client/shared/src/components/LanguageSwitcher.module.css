@@ -1,6 +1,12 @@
-.dropdown {
-  margin-left: 0.75em;
-  color: #0f739d;
-  font-weight: 600;
-  line-height: 4em;
+.languageButtons {
+  text-align: center;
+}
+
+.languageButtons > button.languageButton {
+  height: 2.5em;
+  margin: 0.25em;
+  padding: 0.75em 2.2em;
+  text-transform: none;
+  background-color: #d8b23a;
+  border-radius: 0;
 }
