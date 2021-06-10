@@ -21,7 +21,8 @@ public enum QuestionTypeDto {
   NUMBER,
 
   /**
-   * The question response must be a multi option.
+   * The question response must be a non-negative integer representing a
+   * choice out of multiple options
    */
-  MULTI
+  MULTI,
 }

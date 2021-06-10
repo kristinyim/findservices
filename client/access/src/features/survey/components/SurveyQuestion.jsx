@@ -7,11 +7,10 @@ import {
 import BooleanQuestion from "features/survey/components/BooleanQuestion";
 import NumberQuestion from "features/survey/components/NumberQuestion";
 import MultiQuestion from "features/survey/components/MultiQuestion";
-import { isEmpty, isNil } from "lodash";
+import _, { isEmpty, isNil } from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import _ from "lodash";
 
 /**
  * Provides conversion between the representation of boolean responses used by
@@ -76,8 +75,6 @@ export class MultiConverter {
   }
 }
 
-
-
 /**
  * Returns the appropriate Question and Converter types for the provided
  * question type.
@@ -112,8 +109,6 @@ export default function SurveyQuestion(props) {
   const { Question, Converter } = QuestionFactory.create(questionType);
 
   const handleChange = (event) => {
-    console.log("HandleChange ", event.target.value);
-     
     const response = Converter.stateToStore(event.target.value);
     if (isNil(response)) {
       dispatch(deleteResponse(event.target.name));
@@ -137,7 +132,8 @@ SurveyQuestion.propTypes = {
   /** The key of the question to be rendered. */
   questionKey: PropTypes.string.isRequired,
   /** The type of the question to be rendered. */
-  questionType: PropTypes.oneOf(["BOOLEAN", "CURRENCY", "NUMBER", "MULTI"]).isRequired,
+  questionType: PropTypes.oneOf(["BOOLEAN", "CURRENCY", "NUMBER", "MULTI"])
+    .isRequired,
   /** If true, the question should validate that there is a valid response. */
   error: PropTypes.bool,
 };

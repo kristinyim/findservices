@@ -6,14 +6,13 @@ import { Form, Message } from "semantic-ui-react";
 
 // Returns a list of options for a MULTI question
 function getOptions(t, questionKey) {
-  const options = t(`catalog:${questionKey}.options`, {returnObjects: true});
+  const options = t(`catalog:${questionKey}.options`, { returnObjects: true });
   // Check if we actually have options defined
-  if (options != null && typeof options === 'object') {
-     return options;
+  if (options != null && typeof options === "object") {
+    return options;
   }
   return ["ERROR"];
 }
-
 
 /**
  * Renders a question of type MULTI as an accessible radio group with options
@@ -31,38 +30,85 @@ function MultiQuestion(props) {
   const questionId = kebabCase(questionKey);
   const options = [];
 
-  for (const [index, optionLabel] of getOptions(t, questionKey).entries()) {
-    options.push(
-      <Form.Radio
-        error={error}
-        id={`${questionId}-${index}`}
-        name={questionKey}
-        label={optionLabel}
-        value={`${index+1}`}
-        checked={value === `${index+1}`}
-        onChange={onChange}
-        aria-describedby={`${questionId}-hint ${questionId}-error`}
-      />);
-  }
+  // The question is rendered as a dropdown menu when true,
+  // radio buttons otherwise.
+  const renderDropDown = true;
 
-  return (
-    <Form.Group as="fieldset" className={error ? "error" : null} grouped>
-      <legend>{t(`catalog:${questionKey}.text`)}</legend>
-      <small>{t(`catalog:${questionKey}.hint`, "")}</small>
-      {options}
-      {error && (
-        <Message
-          visible
-          error
-          id={`${questionId}-error`}
-          size="small"
-          role="alert"
+  if (renderDropDown) {
+    for (const [index, optionLabel] of getOptions(t, questionKey).entries()) {
+      options.push(
+        <option
+          error={error}
+          id={`${questionId}-${index}`}
+          name={questionKey}
+          label={optionLabel}
+          value={`${index + 1}`}
+          checked={value === `${index + 1}`}
+          onBlur={onChange}
+          aria-describedby={`${questionId}-hint ${questionId}-error`}
         >
-          {t("survey.question.multi.error")}
-        </Message>
-      )}
-    </Form.Group>
-  );
+          {optionLabel}
+        </option>
+      );
+    }
+
+    console.log("MultiQuestion: ", value);
+    return (
+      <Form.Group as="fieldset" className={error ? "error" : null} grouped>
+        <legend>{t(`catalog:${questionKey}.text`)}</legend>
+        <small>{t(`catalog:${questionKey}.hint`, "")}</small>
+        <select name={`${questionKey}`} onBlur={onChange}>
+          {options}
+        </select>
+        {error && (
+          <Message
+            visible
+            error
+            id={`${questionId}-error`}
+            size="small"
+            role="alert"
+          >
+            {t("survey.question.multi.error")}
+          </Message>
+        )}
+      </Form.Group>
+    );
+    // Render radiobuttons otherwise
+  } else {
+    for (const [index, optionLabel] of getOptions(t, questionKey).entries()) {
+      options.push(
+        <Form.Radio
+          error={error}
+          id={`${questionId}-${index}`}
+          name={questionKey}
+          label={optionLabel}
+          value={`${index + 1}`}
+          checked={value === `${index + 1}`}
+          onChange={onChange}
+          aria-describedby={`${questionId}-hint ${questionId}-error`}
+        />
+      );
+    }
+
+    return (
+      <Form.Group as="fieldset" className={error ? "error" : null} grouped>
+        <legend>{t(`catalog:${questionKey}.text`)}</legend>
+        <small>{t(`catalog:${questionKey}.hint`, "")}</small>
+        {options}
+        {error && (
+          <Message
+            visible
+            error
+            id={`${questionId}-error`}
+            size="small"
+            role="alert"
+          >
+            {t("survey.question.multi.error")}
+          </Message>
+        )}
+      </Form.Group>
+    );
+  }
 }
 
 MultiQuestion.propTypes = {
