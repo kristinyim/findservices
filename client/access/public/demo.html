@@ -1,0 +1,2498 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head id="Head1">
+    <meta charset="UTF-8" />
+    <link
+      href="https://www.sanjoseca.gov/DefaultContent/Default/bootstrap.v3.4.1.min.css"
+      rel="stylesheet"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <title>Maps Gallery | City of San Jose</title>
+    <meta name="viewport" content="width=device-width" />
+
+    <link
+      href="https://www.sanjoseca.gov/DefaultContent/Default/StyleBundleDesignTheme.cssbnd?v=C8TGMqEb5sU2x-O0fQ4MtI-72ZQauQwYpC1nmn3uX441"
+      rel="stylesheet"
+    />
+    <link
+      href="https://www.sanjoseca.gov/Project/Contents/Main/StyleBundleDesignTheme.cssbnd?v=21C3KraHwAPkAMrOxWCyaMX0TUTyI2OpGxYl70a4SBM1"
+      rel="stylesheet"
+    />
+    <link
+      href="https://www.sanjoseca.gov/Areas/Admin/Content/StyleBundleFrontendExtra.cssbnd?v=acwZKNE3RPD1pekbX4Wz3QDE28KLfvHqhg0VPeQSJxg1"
+      rel="stylesheet"
+    />
+    <link
+      href="https://www.sanjoseca.gov/DefaultContent/Default/Print.cssbnd?v=47rmsGcOk4CIHfb2HDg7t9s31eiFEWHej5QI1ytFlII1"
+      rel="stylesheet"
+      media="print"
+    />
+    <link
+      href="https://www.sanjoseca.gov/Project/Contents/Main/Print.cssbnd?v=jfhfKsMmxQr_xKAfv9Fj6qRlRX7gMoxJTHKVE6DLWuo1"
+      rel="stylesheet"
+      media="print"
+    />
+    <script src="https://www.sanjoseca.gov/Scripts/ScriptBundleFAllInOne.jsbnd?v=xv2aD3Pc5CgPPfXb_wpmN066eMQxj51Xt1og7hg7vmM1"></script>
+
+    <script>
+      function handleExternalURL() {}
+    </script>
+    <script>
+      window.visionOptions = {
+        virtualApplicationPath: "/",
+        logOnPath: "Admin/LogOn",
+        logOffPath: "Admin/LogOff",
+        enableSessionTimeout: false,
+        sessionTimeoutInMinutes: 60,
+        timeToAlertBeforeSessionTimeoutInMinutes: 5,
+        extendSessionTimeoutPath: "Admin/Account/ExtendSessionTimeout",
+        mainFolderPath: "/Project/Contents/Main/",
+        centerLocation: "San Jose, CA",
+        siteID: 1,
+        navigationID: 3099,
+        isHomePage: false,
+        emergencyNoticeChanged: true,
+        loggedIn: false,
+        showTopTips: true,
+        currentDesignFolderPath: "/Project/Contents/Main/",
+        useDesignThemFontSizeCss: false,
+        clientResponsiveTableEnabled: true,
+        imageUrl: "/Home/ShowPublishedImage/",
+        engagementAdminEndPoint: "/Admin/Engagement/",
+        visionLiveAdminEndPoint: "/Admin/Components/",
+        cmsAdminEndPoint: "/Admin/",
+        enableSplashUrl: false,
+        eSignatureView: "/Shared/SignatureView",
+        socialMediaInfo: { twitter: { maxLength: 280 } },
+        baseImageUrl: "/Home/ShowPublishedImage",
+      };
+      window.visionApps = {
+        cms_core: {
+          DateFormat: "MM/dd/yyyy",
+          TimeFormat: "h:mm TT",
+          PhoneFormat: "(999) 999-9999",
+          OrganizationName: "City of San Jose",
+          TimeAMFormat: "AM",
+          TimePMFormat: "PM",
+          GoogleReCaptchaPublicKey: "6LeCd4gUAAAAAKoQeSvlf2aA5XEdSP_0wu6eOTYA",
+        },
+      };
+      window.visionApps.token =
+        "eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwiayI6IlI5eENHNWZqdmZVV2lLd0Y0THJqc0E9PSJ9.-rfvv6tIJcTTikeSOgQAUBbjFpnM68Ccl_dvGElXTONh4gfhXh0zdey_KZAldYzcJ_HhsQ6TNs7gIM7PO846X8oKRHb9Goyw.UF5IQvqkF23YZ5fE_SSwcA.XUjNbvZl3vKDApwaDGMRMJ5duGicSuGTWL-AUfOMw5MAXLBT2CZH_1RK1HJ_TSsMp0aLr1-SclNUf812UsCGz8LDTcYljRmw7vbrfdTll2vqELLRFFG3BcihVXB7pLY6lT2UI3dpu19i3n31x7CI7tBl2iyhuO9CLWoQyc4m40WJ8yjuN09VR7coin4JK3Sgedcbt-jIoLdEifjNvkTm7p-Nb_G-offrkF_VbRlKKRg.v5tJIQPeUO7avvCCKNPgL5zPpsTdu0Wf6CWEFoZiT3w";
+      (function (window) {
+        window.cmsCoreConfig = {};
+        (function (config) {
+          (function (window) {
+            window.coreComponentFormConfig = {
+              apiEndPoint: "https://form.visioninternet.com/",
+            };
+          })(window);
+        })(window.cmsCoreConfig);
+      })(window);
+      (function (window) {
+        window.visionLiveConfig = {};
+        (function (config) {
+          config.flexibleComponent = {
+            serverURL: "https://flex.visioninternet.com/",
+          };
+        })(window.visionLiveConfig);
+      })(window);
+    </script>
+
+    <script type="text/javascript">
+      // added the htmlEncode and htmlDecode method to fixed the js load order issue.
+      $.extend($, {
+        htmlEncode: function (html) {
+          var temp = document.createElement("div");
+          temp.textContent != undefined
+            ? (temp.textContent = html)
+            : (temp.innerText = html);
+          var output = temp.innerHTML;
+          temp = null;
+          return output;
+        },
+        htmlDecode: function (text) {
+          var temp = document.createElement("div");
+          temp.innerHTML = text;
+          var output = temp.innerText || temp.textContent;
+          temp = null;
+          return output;
+        },
+      });
+      $(function () {
+        //script for view full site button, placed here to keep firefox for mobile devices happy
+        var viewFullElement = document.getElementById("view-full");
+        if (viewFullElement) {
+          viewFullElement.innerHTML = "View Full Site";
+          viewFullElement.className = "mobile_only fullsite";
+        }
+      });
+    </script>
+
+    <!--[if lt IE 9]>
+      <script src="https://www.sanjoseca.gov/Scripts/ScriptBundleOthers.jsbnd?v=3Q7FhTQfRrKx8h7Kvdbh9bBluzlNlXKsFAERd4g8_TY1"></script>
+    <![endif]-->
+
+    <link
+      id="active_font"
+      rel="stylesheet"
+      type="text/css"
+      href="https://www.sanjoseca.gov/Project/Contents/Main/x-small.css"
+    />
+
+    <link rel="Shortcut Icon" href="https://www.sanjoseca.gov/favicon.ico" />
+
+    <!-- Google Universal Analytics -->
+    <script type="text/javascript">
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+
+      ga("create", "UA-159904631-1", "auto");
+      ga("require", "displayfeatures");
+      //TFS 21771, Enhanced Link Attribution, https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanced-link-attribution
+      ga("require", "linkid");
+      ga("set", "dimension1", "Maps Gallery, ID:3099");
+      ga("set", "dimension2", "2021");
+      ga("send", "pageview");
+    </script>
+    <!-- End Google Universal Analytics -->
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <script>
+      $(function () {
+        $.frontendSessionManager({
+          virtualApplicationPath: "/",
+          backendUserLogin: false,
+          frontendUserLogin: false,
+          sessionTimeoutInMinutes: 60,
+          timeToAlertBeforeSessionTimeoutInMinutes: 5,
+          extendSessionTimeoutPath: "Home/FrontEndExtendSessionTimeout",
+        }).setTimerForSessionExpiration();
+      });
+    </script>
+
+    <meta
+      name="google-site-verification"
+      content="uNtKwj-xgU5r8i-L-lza0Pb90LbbZNeh2D8DYKs0jhQ"
+    />
+    <meta
+      name="google-site-verification"
+      content="s3Xf367UGRll4ade2K3Bgbccv9r7cC4p78nT40cezIo"
+    />
+    <style>
+      #share > ul > li:nth-child(3) {
+        display: none !important;
+      }
+      .tab-content {
+        margin: 47px 0 0 !important;
+      }
+    </style>
+    <link
+      href="https://customer.cludo.com/css/templates/v2.1/essentials/cludo-search.min.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <style>
+      @media screen and (min-width: 48em) {
+        .dropdownmenu
+          .megamenu_container
+          .inner_container
+          .megamenu_column
+          a.megamenu_level1 {
+          font-weight: bold !important;
+          font-size: 17px !important;
+          font-family: Open Sans, sans-serif !important;
+          text-transform: uppercase !important;
+        }
+      }
+      /* Hide title right links */
+      @media screen and (max-width: 767px) {
+        .title_right {
+          display: none !important;
+        }
+      }
+    </style>
+
+    <script type="text/javascript">
+      // <![CDATA[
+      (function () {
+        var sz = document.createElement("script");
+        sz.type = "text/javascript";
+        sz.async = true;
+        sz.src = "//siteimproveanalytics.com/js/siteanalyze_6721.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(sz, s);
+      })();
+      // ]]>
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-M9J6V95");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+
+  <body class="front_end_body site_standardsitetemplate">
+    <link
+      href="https://www.sanjoseca.gov/DefaultContent/Default/StyleBundleAngularLib.cssbnd?v=sED2Qjf38ysQJYZW_ZvZj-7IGXKm4NOJhdA51oOtG5A1"
+      rel="stylesheet"
+    />
+
+    <script>
+      window.frontendCommonConfig = {
+        loginPage: "https://www.sanjoseca.gov/sys/sso/login",
+        popupLoginPage: "/sys/sso/popuplogin",
+        photoBaseUrlForPeople:
+          "https://www.sanjoseca.gov/sys/sso/ShowProfilePhoto?id=",
+        photoBaseUrl: "https://www.sanjoseca.gov/Home/ShowPublishedImage/",
+        token: window.visionApps ? window.visionApps.token : "",
+        cmsUserLogged: false,
+        anonymousAvatar:
+          "https://www.sanjoseca.gov/DefaultContent/Default/_gfx/anonymous.png",
+        loginUser: {
+          name: "",
+          avatar: "",
+          userID: null,
+          firstName: "",
+          lastName: "",
+          imageID: null,
+          email: "",
+        },
+      };
+    </script>
+
+    <script>
+      //It's before the AngularJSLib Loading, which might be update in the AngularJSLib bundle.
+      window.viPredefinedModules = [];
+    </script>
+    <script src="https://www.sanjoseca.gov/Scripts/ScriptBundleAngularLib.jsbnd?v=ZY8SoO40tClD_L7_09AuBWeIcXjIMYmaCb68b4xbL3Q1"></script>
+
+    <script>
+      (function (window, angular) {
+        $("body").attr("ng-app", "vi.cms");
+
+        window.viCurrentModule = angular.module(
+          "vi.cms",
+          window.viPredefinedModules || []
+        );
+      })(window, angular);
+    </script>
+
+    <script src="https://www.sanjoseca.gov/Scripts/frontendCoreBundle.jsbnd?v=g3jftjuIaNapQMXh3I_PO6AJVjcGUIHRrSkn_10w_j81"></script>
+
+    <!--stopindex-->
+    <noscript>
+      <div class="noscript_alert">
+        <span
+          >Please enable JavaScript in your browser for a better user
+          experience.</span
+        >
+      </div>
+    </noscript>
+    <!--startindex-->
+    <div class="vi-temp-message-container" style="display: none"></div>
+
+    <!--stopindex-->
+    <div class="alert_container">
+      <a class="hide" id="alert_controls" data-action="/Home/SetTopTipCookie"
+        >Show/Hide</a
+      >
+      <div class="important_alert_wrapper">
+        <div class="alert_right">
+          <div class="important_alert">
+            <style>
+              /* Temporary Launch Color */
+              .alert_container .important_alert_wrapper {
+                background-color: #b01111;
+                /*background-color: #158081; light teal color*/
+                /*background-color: #2427e3; stage 1*/
+                /*background-color: #5ead44; stage 2*/
+                /*background-color: #e5bf24; stage 3*/
+                /*background-color: #eb9b34; stage 4*/
+                /*background-color: #B01111; stage 5*/
+                /*background-color: #FF5500; stage 6*/
+                /*background-color: #eb9b34; stage 7*/
+                /*background-color: #e5bf24; stage 8*/
+                /*background-color: #5ead44; stage 9*/
+                /*background-color: #2427e3; stage 10*/
+              }
+              #alert_controls.show {
+                background-color: #b01111;
+              }
+              #alert_controls.hide {
+                background-color: #b01111;
+              }
+              .alert_container:before {
+                border-right: 1px solid #fff;
+                /*border-right: 1px solid #003a49;*/
+              }
+            </style>
+            <h2>EMERGENCY NOTIFICATIONS</h2>
+            Updates on City of San José Services and/or Operations  (<a
+              href="https://www.sanjoseca.gov/news-stories/news/emergency-notifications"
+              target="_blank"
+              title="English Updates"
+              >English</a
+            >
+            |
+            <a
+              href="https://www.sanjoseca.gov/news-stories/news/emergency-notifications/notificaciones-de-emergencia"
+              target="_blank"
+              title="Español"
+              >Español</a
+            >
+            |
+            <a
+              href="https://www.sanjoseca.gov/news-stories/news/emergency-notifications/thong-bao-khan-cap"
+              target="_blank"
+              title="Tiếng Việt"
+              >Tiếng Việt</a
+            >
+            |
+            <a
+              href="https://www.sanjoseca.gov/news-stories/news/emergency-notifications/chinese-flash-reports"
+              target="_blank"
+              title="中文"
+              >中文</a
+            >).<br />
+            COVID-19 Pandemic Help for&nbsp;<a
+              href="https://www.sanjoseca.gov/news-stories/news/virtual-local-assistance-center"
+              title="COVID-19 Help for Residents"
+              target="_blank"
+              >Residents</a
+            >&nbsp;|&nbsp;<a
+              href="https://www.sanjoseca.gov/?navid=5526"
+              title="COVID-19 Help for Businesses"
+              target="_blank"
+              >Businesses</a
+            >&nbsp;|&nbsp;<a
+              href="https://www.sanjoseca.gov/?navid=5471"
+              title="COVID-19 Help for Nonprofits"
+              target="_blank"
+              >Nonprofits</a
+            ><br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--startindex-->
+
+    <div class="sitewrapper site_template mainSpan_wrapper">
+      <div class="mainSpan" id="mainSpan_wrapper_Screen">
+        <!--stopindex-->
+        <div id="skipnav">
+          <a href="#sitebody">
+            <img
+              alt="Skip to page body"
+              src="https://www.sanjoseca.gov/DefaultContent/Default/_gfx/spacer.gif"
+          /></a>
+
+          <a title="Home" href="https://www.sanjoseca.gov/home">
+            <img
+              alt="Home"
+              src="https://www.sanjoseca.gov/DefaultContent/Default/_gfx/spacer.gif"
+          /></a>
+
+          <a title="Residents" href="https://www.sanjoseca.gov/residents">
+            <img
+              alt="Residents"
+              src="https://www.sanjoseca.gov/DefaultContent/Default/_gfx/spacer.gif"
+          /></a>
+
+          <a title="Business" href="https://www.sanjoseca.gov/business">
+            <img
+              alt="Business"
+              src="https://www.sanjoseca.gov/DefaultContent/Default/_gfx/spacer.gif"
+          /></a>
+
+          <a title="Visitors" href="https://www.sanjoseca.gov/visitors">
+            <img
+              alt="Visitors"
+              src="https://www.sanjoseca.gov/DefaultContent/Default/_gfx/spacer.gif"
+          /></a>
+
+          <a
+            title="Your Government"
+            href="https://www.sanjoseca.gov/your-government"
+          >
+            <img
+              alt="Your Government"
+              src="https://www.sanjoseca.gov/DefaultContent/Default/_gfx/spacer.gif"
+          /></a>
+
+          <a
+            title="News & Stories"
+            href="https://www.sanjoseca.gov/news-stories"
+          >
+            <img
+              alt="News & Stories"
+              src="https://www.sanjoseca.gov/DefaultContent/Default/_gfx/spacer.gif"
+          /></a>
+        </div>
+        <!--startindex-->
+
+        <header id="siteheader" class="">
+          <!--stopindex-->
+          <h1 class="wcag_only">City of San Jose</h1>
+          <a id="home_link" href="https://www.sanjoseca.gov/home">Home</a>
+
+          <a class="menu_trigger mobile_only" href="javascript:void(0);"
+            >Menu</a
+          >
+
+          <!--startindex-->
+
+          <div id="headercolumn" class="site_template_column header_column">
+            <!--stopindex-->
+
+            <!--startindex-->
+
+            <!--stopindex-->
+
+            <div class="social_icons">
+              <a
+                href="https://www.facebook.com/CityofSanJose"
+                target="_blank"
+                title="City of San Jose Facebook"
+              >
+                <img
+                  src="https://www.sanjoseca.gov/home/showpublishedimage/1094/636640569203100000"
+                  alt="facebook"
+                />
+              </a>
+              <a
+                href="https://www.twitter.com/CityofSanJose"
+                target="_blank"
+                title="City of San Jose Twitter"
+              >
+                <img
+                  src="https://www.sanjoseca.gov/home/showpublishedimage/1100/636640569211230000"
+                  alt="twitter"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/cityofsanjose/"
+                target="_blank"
+                title="City of San Jose Instagram"
+              >
+                <img
+                  src="https://www.sanjoseca.gov/home/showpublishedimage/8621/637044883381200000"
+                  alt="instagram"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/cityofsanjose"
+                target="_blank"
+                title="City of San Jose LinkedIn"
+              >
+                <img
+                  src="https://www.sanjoseca.gov/home/showpublishedimage/1098/636640569208570000"
+                  alt="linkedin"
+                />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCeDiMzJEUbPgaruDcXnD4Cg"
+                target="_blank"
+                title="City of San Jose YouTube"
+              >
+                <img
+                  src="https://www.sanjoseca.gov/home/showpublishedimage/1102/636640569214670000"
+                  alt="youtube"
+                />
+              </a>
+              <a
+                href="https://www.nextdoor.com/agency-detail/ca/san-jose/city-of-san-jose/"
+                target="_blank"
+                title="City of San Jose Next Door"
+              >
+                <img
+                  src="https://www.sanjoseca.gov/home/showpublishedimage/1096/636640569205770000"
+                  alt="home"
+                />
+              </a>
+            </div>
+            <!--startindex-->
+
+            <style>
+              .vision-search2-query-wrap {
+                display: none;
+              }
+              .vision-search2-advanced-opener {
+                background-color: #123a47;
+              }
+              .vision-search2-advanced-opener-icon {
+                background: #123a47
+                  url(/DefaultContent/Default/_gfx/search2/whiteDownArrow.svg)
+                  no-repeat;
+                background-position: 0 5px;
+              }
+              .vision-search2-imagetoggle-on {
+                background-color: #123a47;
+                border: 1px solid #123a47;
+              }
+              .vision-search2-imagetoggle-onside {
+                color: #123a47;
+                border: 1px solid #123a47;
+              }
+            </style>
+
+            <div class="top_search">
+              <div class="search_block">
+                <div id="searchbox" class="clearfix">
+                  <label style="display: none" for="search_text">Search</label>
+                  <input
+                    title="I am looking for..."
+                    id="search_text"
+                    placeholder="Search..."
+                    type="text"
+                  />
+                  <a href="javascript:void(0);">Go</a>
+                </div>
+
+                <div class="top_links">
+                  <h2>Popular Searches</h2>
+                  <ul class="clearfix">
+                    <li>
+                      <a
+                        href="https://www.sanjoseca.gov/your-government/departments-offices/human-resources/employment/apply-for-a-job-4903"
+                        target="_self"
+                        >Browse City Jobs</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.sanjoseca.gov/your-government/departments/finance/business-tax-registration"
+                        target="_self"
+                        >Business License</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.sanjoseca.gov/residents/pay-my-bill"
+                        target="_self"
+                        >Make a Payment</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <script>
+              $(function () {
+                $("#searchbox input").keydown(function (e) {
+                  if (e.keyCode == 13) {
+                    $("#searchbox a").click();
+                  }
+                });
+                $("#searchbox a").click(function () {
+                  var keyWord = $("#searchbox input#search_text").val();
+                  if (keyWord.length <= 0) {
+                    return false;
+                  }
+                  keyWord = keyWord.replace(/^\s\s*/, "").replace(/\s\s*$/, "");
+                  keyWord = encodeURIComponent(
+                    keyWord.replace("<", " ").replace(">", " ")
+                  );
+                  //var link = 'https://www.sanjoseca.gov/residents/search';
+                  var link = "https://www.sanjoseca.gov/residents/site-search";
+                  if (link.indexOf("?") >= 0)
+                    //link = link + "#&cludoquery=" + keyWord + "&cludopage=1";
+                    link = link + "?q=" + keyWord;
+                  //link = link + "#&cludoquery=" + keyWord + "&cludopage=1";
+                  else link = link + "?q=" + keyWord;
+
+                  //if (window.location.href.indexOf('/residents/site-search') > 0) {
+                  //  window.location.href = link;
+                  //window.location.reload(false);
+                  //} else {
+                  window.location.href = link;
+                  //}
+                });
+              });
+            </script>
+
+            <div class="translatebox desktop_only">
+              <div id="google_translate_element"></div>
+              <script>
+                function googleTranslateElementInit() {
+                  new google.translate.TranslateElement(
+                    {
+                      includedLanguages:
+                        "en,ar,zh-CN,zh-TW,tl,hi,ja,ko,fa,pt,ru,es,vi",
+                      pageLanguage: "en",
+                    },
+                    "google_translate_element"
+                  );
+                  $("select.goog-te-combo").attr("title", "translate");
+                }
+              </script>
+              <script src="https://www.sanjoseca.gov//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            </div>
+
+            <!--stopindex-->
+            <div class="top_resize">
+              <div class="font_size">
+                <a
+                  href="javascript:void(0);"
+                  title="smaller font size"
+                  class="font_smaller"
+                  >Smaller</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  title="default font size"
+                  class="text_size"
+                  >Default</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  title="larger font size"
+                  class="font_larger"
+                  >Larger</a
+                >
+              </div>
+            </div>
+            <!--startindex-->
+
+            <div class="weather">
+              <a
+                href="https://www.sanjoseca.gov//www.yahoo.com/news/weather/united-states/california/san-jose-2488042/"
+                target="_blank"
+                title="Weather detail"
+                alt="Weather detail"
+                ><img
+                  src="https://www.sanjoseca.gov//cmsres.visioninternet.com/icons/yahooweather_icons_100/30.png"
+                  alt="weather icon"
+                />76&#8457;</a
+              >
+            </div>
+          </div>
+        </header>
+
+        <div class="onecolumnlayout clearfix" id="sitebody">
+          <div id="ColumnUserControl1" class="column top_col clearfix">
+            <!--!!WidgetStart, vi-orderdata="0"  vi-hideonmobile="false" vi-widgetinstancedata="15356"WidgetStart!!-->
+
+            <!--stopindex-->
+
+            <div id="main_menu_widget_wrapper">
+              <div class="main_menu_widget">
+                <link
+                  href="https://www.sanjoseca.gov/DefaultContent/Default/StyleBundleMegaMenuDropDown.cssbnd?v=CD_eN-fYJU8KKPigt6x-Ey-z8_WTsoZ7bqx2pLTZtXU1"
+                  rel="stylesheet"
+                />
+                <link
+                  href="https://www.sanjoseca.gov/Project/Contents/Main/StyleBundleMegaMenuDropDown.cssbnd?v=zQm7XkYGspYLAEtQIncK81Op2fP5swrWtGwc5ZkrvMs1"
+                  rel="stylesheet"
+                />
+
+                <nav
+                  class="advancedmegamenu mainnav"
+                  id="menuContainer_15356_0_6193"
+                >
+                  <ul class="dropdownmenu clearfix">
+                    <li class="megamenu_first" id="dropdownrootitem1">
+                      <a
+                        class="dropdownrootitem1"
+                        href="https://www.sanjoseca.gov/home"
+                        title="Home"
+                        data-navid="1"
+                        target="_self"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="megamenu_first" id="dropdownrootitem2">
+                      <a
+                        class="dropdownrootitem2"
+                        href="https://www.sanjoseca.gov/residents"
+                        title="Find City Services"
+                        data-navid="2"
+                        target="_self"
+                        >Residents</a
+                      >
+                      <div class="megamenu_container widthcontainer3col">
+                        <div class="inner_container">
+                          <ul class="megamenu_column">
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/residents/apply-for-a-job"
+                                title="City Careers"
+                                data-navid="4446"
+                                target="_self"
+                                >City Careers</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/residents/pay-my-bill"
+                                title="Payments"
+                                data-navid="3427"
+                                target="_self"
+                                >Payments</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/residents/community-centers"
+                                title="Parks &amp; Recreation"
+                                data-navid="3428"
+                                target="_self"
+                                >Parks &amp; Recreation</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/residents/parking"
+                                title="Parking"
+                                data-navid="3435"
+                                target="_self"
+                                >Parking</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/residents/city-maps"
+                                title="City Maps"
+                                data-navid="6691"
+                                target="_self"
+                                >City Maps</a
+                              >
+                            </li>
+                          </ul>
+                          <ul class="megamenu_column">
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/residents/recycling-trash"
+                                title="Recycling &amp; Garbage"
+                                data-navid="3432"
+                                target="_self"
+                                >Recycling &amp; Garbage</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/residents/housing"
+                                title="Housing"
+                                data-navid="3429"
+                                target="_self"
+                                >Housing</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/residents/pets-and-animal-adoption"
+                                title="Animals"
+                                data-navid="3438"
+                                target="_self"
+                                >Animals</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/residents/report-an-issue"
+                                title="Report Issues"
+                                data-navid="5081"
+                                target="_self"
+                                >Report Issues</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/residents/public-safety/emergency-management"
+                                title="Emergency Preparedness"
+                                data-navid="4645"
+                                target="_self"
+                                >Emergency Preparedness</a
+                              >
+                            </li>
+                          </ul>
+                          <ul class="megamenu_column">
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/residents/public-safety/police"
+                                title="Police"
+                                data-navid="4643"
+                                target="_blank"
+                                >Police</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/residents/public-safety/fire"
+                                title="Fire"
+                                data-navid="4644"
+                                target="_self"
+                                >Fire</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/residents/volunteer"
+                                title="Volunteer with the City"
+                                data-navid="4445"
+                                target="_blank"
+                                >Volunteering</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/residents/libraries"
+                                title="Library"
+                                data-navid="3431"
+                                target="_self"
+                                >Library</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/residents/airport"
+                                title="Airport"
+                                data-navid="6692"
+                                target="_blank"
+                                >Airport</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="megamenu_first" id="dropdownrootitem3">
+                      <a
+                        class="dropdownrootitem3"
+                        href="https://www.sanjoseca.gov/business"
+                        title="Business"
+                        data-navid="3"
+                        target="_self"
+                        >Business</a
+                      >
+                      <div class="megamenu_container widthcontainer3col">
+                        <div class="inner_container">
+                          <ul class="megamenu_column">
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/business/check-your-zoning"
+                                title="Check Zoning"
+                                data-navid="5013"
+                                target="_self"
+                                >Check Zoning</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/business/find-land-use-info"
+                                title="Find Land Use Info"
+                                data-navid="5014"
+                                target="_self"
+                                >Find Land Use Info</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/business/apply-for-a-sign-permit"
+                                title="Apply for Sign Permit"
+                                data-navid="5015"
+                                target="_self"
+                                >Apply for Sign Permit</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/business/apply-for-a-building-permit"
+                                title="Apply for Building Permit"
+                                data-navid="5016"
+                                target="_self"
+                                >Apply for Building Permit</a
+                              >
+                            </li>
+                          </ul>
+                          <ul class="megamenu_column">
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/business/register-your-business-or-rental"
+                                title="Register Business or Rental"
+                                data-navid="5017"
+                                target="_self"
+                                >Register Business or Rental</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/business/pay-your-business-tax"
+                                title="Pay Business Tax"
+                                data-navid="5018"
+                                target="_self"
+                                >Pay Business Tax</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/business/help-for-startups"
+                                title="Help for Small Business"
+                                data-navid="5019"
+                                target="_self"
+                                >Help for Small Business</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/business/why-locate-here"
+                                title="Why Locate Here"
+                                data-navid="5020"
+                                target="_blank"
+                                >Why Locate Here</a
+                              >
+                            </li>
+                          </ul>
+                          <ul class="megamenu_column">
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/business/move-your-business-to-san-jose"
+                                title="Move Business to San Jose"
+                                data-navid="5021"
+                                target="_blank"
+                                >Move Business to San Jose</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/business/become-a-preferred-vendor"
+                                title="Become a Preferred Vendor"
+                                data-navid="5022"
+                                target="_self"
+                                >Become a Preferred Vendor</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/business/business-opportunities"
+                                title="Business Opportunities"
+                                data-navid="4701"
+                                target="_self"
+                                >Do Business with the City</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/your-government/departments/office-of-the-city-manager/community-grants"
+                                title="Apply for City Grants"
+                                data-navid="2552"
+                                target="_self"
+                                >Apply for City Grants</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="megamenu_first" id="dropdownrootitem4">
+                      <a
+                        class="dropdownrootitem4"
+                        href="https://www.sanjoseca.gov/visitors"
+                        title="Visitors"
+                        data-navid="4"
+                        target="_self"
+                        >Visitors</a
+                      >
+                      <div class="megamenu_container widthcontainer3col">
+                        <div class="inner_container">
+                          <ul class="megamenu_column">
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/visitors/events"
+                                title="Events"
+                                data-navid="4995"
+                                target="_blank"
+                                >Events</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/visitors/things-to-do"
+                                title="Things to Do"
+                                data-navid="4996"
+                                target="_blank"
+                                >Things to Do</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/visitors/kids-and-family"
+                                title="Kids and Family"
+                                data-navid="4997"
+                                target="_blank"
+                                >Kids and Family</a
+                              >
+                            </li>
+                          </ul>
+                          <ul class="megamenu_column">
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/visitors/theaters"
+                                title="Theaters"
+                                data-navid="4998"
+                                target="_blank"
+                                >Theaters</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/visitors/trip-ideas"
+                                title="Trip Ideas"
+                                data-navid="4999"
+                                target="_blank"
+                                >Trip Ideas</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/visitors/neighborhoods"
+                                title="Neighborhoods"
+                                data-navid="5000"
+                                target="_blank"
+                                >Neighborhoods</a
+                              >
+                            </li>
+                          </ul>
+                          <ul class="megamenu_column">
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/visitors/restaurants"
+                                title="Restaurants"
+                                data-navid="5001"
+                                target="_blank"
+                                >Restaurants</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/visitors/hotels"
+                                title="Hotels"
+                                data-navid="5002"
+                                target="_blank"
+                                >Hotels</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/visitors/shop"
+                                title="Shop"
+                                data-navid="5010"
+                                target="_blank"
+                                >Shop</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="megamenu_first" id="dropdownrootitem5">
+                      <a
+                        class="dropdownrootitem5"
+                        href="https://www.sanjoseca.gov/your-government"
+                        title="Your Government"
+                        data-navid="5"
+                        target="_self"
+                        >Your Government</a
+                      >
+                      <div class="megamenu_container widthcontainer3col">
+                        <div class="inner_container">
+                          <ul class="megamenu_column">
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/your-government/mayor"
+                                title="Mayor"
+                                data-navid="4988"
+                                target="_self"
+                                >Mayor</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/your-government/city-council"
+                                title="City Council"
+                                data-navid="4698"
+                                target="_self"
+                                >City Council</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/your-government/office-of-the-city-manager"
+                                title="City Manager"
+                                data-navid="4707"
+                                target="_self"
+                                >City Manager</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/your-government/city-attorney"
+                                title="City Attorney"
+                                data-navid="5026"
+                                target="_self"
+                                >City Attorney</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/your-government/city-auditor"
+                                title="City Auditor"
+                                data-navid="5028"
+                                target="_self"
+                                >City Auditor</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/your-government/city-clerk"
+                                title="City Clerk"
+                                data-navid="5027"
+                                target="_self"
+                                >City Clerk</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/your-government/independent-police-auditor"
+                                title="Independent Police Auditor"
+                                data-navid="5029"
+                                target="_self"
+                                >Independent Police Auditor</a
+                              >
+                            </li>
+                          </ul>
+                          <ul class="megamenu_column">
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/your-government/departments"
+                                title="Departments &amp; Offices"
+                                data-navid="532"
+                                target="_self"
+                                >Departments &amp; Offices</a
+                              >
+                              <ul class="megamenu_level1">
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments-offices/admin-policy-and-intergovernmental-relations"
+                                    title="Admin, Policy, and Intergovernmental Relations"
+                                    data-navid="6866"
+                                    target="_self"
+                                    >Admin, Policy, and Intergovernmental
+                                    Relations</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments-offices/animal-care-services/animal-care-services-2"
+                                    title="Animal Care &amp; Services"
+                                    data-navid="4807"
+                                    target="_self"
+                                    >Animal Care &amp; Services</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments-offices/airport"
+                                    title="Airport"
+                                    data-navid="6867"
+                                    target="_blank"
+                                    >Airport</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments-offices/budget"
+                                    title="Budget"
+                                    data-navid="6868"
+                                    target="_self"
+                                    >Budget</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments-offices/civic-innovation"
+                                    title="Civic Innovation"
+                                    data-navid="6869"
+                                    target="_self"
+                                    >Civic Innovation</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments-offices/communications"
+                                    title="Communications"
+                                    data-navid="6870"
+                                    target="_self"
+                                    >Communications</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/department-directory/community-energy"
+                                    title="San Jose Clean Energy"
+                                    data-navid="5106"
+                                    target="_self"
+                                    >Community Energy</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments/office-of-cultural-affairs"
+                                    title="Cultural Affairs"
+                                    data-navid="1385"
+                                    target="_self"
+                                    >Cultural Affairs</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments-offices/economic-development"
+                                    title="Economic Development"
+                                    data-navid="6871"
+                                    target="_self"
+                                    >Economic Development</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments-offices/emergency-management"
+                                    title="Emergency Management"
+                                    data-navid="6872"
+                                    target="_self"
+                                    >Emergency Management</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments-offices/employee-relations"
+                                    title="Employee Relations"
+                                    data-navid="6873"
+                                    target="_self"
+                                    >Employee Relations</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/environment"
+                                    title="Environmental Services"
+                                    data-navid="306"
+                                    target="_self"
+                                    >Environmental Services</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments/event-services-at-city-hall"
+                                    title="Event Services at City Hall"
+                                    data-navid="3071"
+                                    target="_self"
+                                    >Event Services</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments/finance"
+                                    title="Core Services"
+                                    data-navid="3124"
+                                    target="_self"
+                                    >Finance</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments-offices/fire/fire-department"
+                                    title="Fire Department"
+                                    data-navid="4746"
+                                    target="_self"
+                                    >Fire Department</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments/housing"
+                                    title="Housing"
+                                    data-navid="4647"
+                                    target="_self"
+                                    >Housing</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments/human-resources"
+                                    title="Human Resources"
+                                    data-navid="926"
+                                    target="_self"
+                                    >Human Resources</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments/information-technology"
+                                    title="Information Technology"
+                                    data-navid="1565"
+                                    target="_self"
+                                    >Information Technology</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments-offices/library"
+                                    title="Library"
+                                    data-navid="4899"
+                                    target="_blank"
+                                    >Library</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments/parks-recreation-neighborhood-services"
+                                    title="Parks, Recreation &amp; Neighborhood Services"
+                                    data-navid="1999"
+                                    target="_self"
+                                    >Parks, Recreation &amp; Neighborhood
+                                    Services</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments/planning-building-code-enforcement"
+                                    title="About Us"
+                                    data-navid="2575"
+                                    target="_self"
+                                    >Planning, Building &amp; Code
+                                    Enforcement</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments-offices/police"
+                                    title="Police Department"
+                                    data-navid="4727"
+                                    target="_blank"
+                                    >Police Department</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments/public-works"
+                                    title="Public Works"
+                                    data-navid="3092"
+                                    target="_self"
+                                    >Public Works</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments-offices/office-of-racial-equity"
+                                    title="Racial Equity"
+                                    data-navid="6929"
+                                    target="_self"
+                                    >Racial Equity</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments-offices/retirement"
+                                    title="Retirement"
+                                    data-navid="4728"
+                                    target="_blank"
+                                    >Retirement Services</a
+                                  >
+                                </li>
+                                <li class="megamenu_level2">
+                                  <a
+                                    class="megamenu_level2"
+                                    href="https://www.sanjoseca.gov/your-government/departments-offices/transportation/department-of-transportation"
+                                    title="Transportation"
+                                    data-navid="4993"
+                                    target="_self"
+                                    >Transportation</a
+                                  >
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                          <ul class="megamenu_column">
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/your-government/agendas-minutes"
+                                title="Agendas &amp; Minutes"
+                                data-navid="4718"
+                                target="_self"
+                                >Agendas &amp; Minutes</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/your-government/watch-a-meeting"
+                                title="Watch Public Meetings"
+                                data-navid="5043"
+                                target="_self"
+                                >Participate &amp; Watch Public Meetings</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/your-government/boards-commissions"
+                                title="Boards &amp; Commissions"
+                                data-navid="4719"
+                                target="_self"
+                                >Boards &amp; Commissions</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/your-government/open-government-open-data"
+                                title="Official City Records"
+                                data-navid="2556"
+                                target="_self"
+                                >Official City Records</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/your-government/open-data"
+                                title="Open Data"
+                                data-navid="5042"
+                                target="_self"
+                                >Open Data</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/your-government/city-charter"
+                                title="City Charter"
+                                data-navid="4720"
+                                target="_self"
+                                >City Charter</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/your-government/municipal-code"
+                                title="Municipal Code"
+                                data-navid="4721"
+                                target="_blank"
+                                >Municipal Code</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="megamenu_first" id="dropdownrootitem6">
+                      <a
+                        class="dropdownrootitem6"
+                        href="https://www.sanjoseca.gov/news-stories"
+                        title="News &amp; Stories"
+                        data-navid="6"
+                        target="_self"
+                        >News &amp; Stories</a
+                      >
+                      <div class="megamenu_container widthcontainer3col">
+                        <div class="inner_container">
+                          <ul class="megamenu_column">
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/news-stories/media-contacts"
+                                title="Media Contacts"
+                                data-navid="5004"
+                                target="_self"
+                                >Media Contacts</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/news-stories/social-media-center"
+                                title="Social Media Center"
+                                data-navid="4817"
+                                target="_self"
+                                >Social Media Center</a
+                              >
+                            </li>
+                          </ul>
+                          <ul class="megamenu_column">
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/news-stories/news-stories"
+                                title="News"
+                                data-navid="4699"
+                                target="_self"
+                                >News</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/news-stories/blog"
+                                title="Blog"
+                                data-navid="5154"
+                                target="_self"
+                                >Blog</a
+                              >
+                            </li>
+                          </ul>
+                          <ul class="megamenu_column">
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/news-stories/logo-guidelines"
+                                title="Logo Guidelines"
+                                data-navid="4833"
+                                target="_self"
+                                >Logo Guidelines</a
+                              >
+                            </li>
+                            <li class="megamenu_level1">
+                              <a
+                                class="megamenu_level1"
+                                href="https://www.sanjoseca.gov/news-stories/our-story"
+                                title="Our Story"
+                                data-navid="5031"
+                                target="_blank"
+                                >Our Story</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <script>
+                    $(function () {
+                      /**load the Advance Mega Menu which is set to async load**/
+                      $(
+                        ".async_widget_container.custominvoke"
+                      ).loadAsyncContainer();
+                    });
+                  </script>
+                  <script>
+                    $(function () {
+                      var menuContainer = $("#menuContainer_15356_0_6193");
+                      menuContainer
+                        .find('.dropdownmenu>li>a[data-navid="5"]')
+                        .closest("li")
+                        .addClass("active");
+                    });
+                  </script>
+                </nav>
+              </div>
+            </div>
+
+            <script>
+              /**********************************************************
+    Dropdown Menu delay disappearance on mouse out
+    *********************************************************/
+              /*javascript to delay the disappearance of the menu when the user mouses out.  Uses jquery library.*/
+              $(function () {
+                var timer = null;
+                var delay = 800; //change this number for shorter or longer delay
+
+                //using megamenu
+                var dropdowncontainer = ">.megamenu_container";
+                var activePage = $(".mainnav .dropdownmenu > li.active");
+                $(".mainnav > .dropdownmenu > li").hoverIntent(
+                  //what happens on hover over
+                  function () {
+                    //end timer and stop hiding if they are mousing back in.
+                    if (timer != null) {
+                      clearTimeout(timer);
+                      timer = null;
+                    }
+                    // Find the hovered menu's sub-menu
+                    var $menu = $(this);
+                    var $submenu = $(this).find(dropdowncontainer);
+
+                    // hide any other submenus that are open
+                    $(".mainnav > .dropdownmenu>li" + dropdowncontainer)
+                      .not($submenu)
+                      .css("display", "none");
+                    $(".mainnav > .dropdownmenu li.active")
+                      .not($menu)
+                      .not(activePage)
+                      .removeClass("active");
+
+                    // show current menu
+                    $submenu.css("display", "block");
+                    $menu.addClass("active");
+                  },
+
+                  //what happens on mouse out
+                  function () {
+                    var $submenu = $(this).find(dropdowncontainer);
+                    var $menu = $(this);
+                    // delay disappearance
+                    var mouseDelay = $(this).data("mouseDelay") || delay;
+                    clearTimeout(timer);
+                    timer = setTimeout(function () {
+                      $submenu.css("display", "none");
+                      $menu.not(activePage).removeClass("active");
+                      clearTimeout(timer);
+                      timer = null;
+                    }, mouseDelay);
+                  }
+                );
+
+                $("body").bind("keyup", function (event) {
+                  if (event.keyCode == 9) {
+                    // Find the hovered menu's sub-menu
+                    var $menu = $(event.target).closest("li");
+                    if ($menu.hasClass("megamenu_first")) {
+                      var $submenu = $menu.find(dropdowncontainer);
+
+                      // hide any other submenus that are open
+                      $(".mainnav > .dropdownmenu>li" + dropdowncontainer)
+                        .not($submenu)
+                        .css("display", "none");
+                      $(".mainnav > .dropdownmenu li.active")
+                        .not($menu)
+                        .not(activePage)
+                        .removeClass("active");
+
+                      // show current menu
+                      $submenu.css("display", "block");
+                      $menu.addClass("active");
+                    }
+                  }
+                });
+              });
+            </script>
+
+            <script>
+              //$(function ()
+              {
+                var menuContainerID = "menuContainer_15356_0_6193";
+                var menuContainer = $("#" + menuContainerID);
+
+                function isIE(userAgent) {
+                  userAgent = userAgent || navigator.userAgent;
+                  return (
+                    userAgent.indexOf("MSIE ") > -1 ||
+                    userAgent.indexOf("Trident/") > -1
+                  );
+                }
+
+                function isIE9(userAgent) {
+                  userAgent = userAgent || navigator.userAgent;
+                  return userAgent.indexOf("MSIE 9") > -1;
+                }
+
+                function isTouchScreenEvent(event) {
+                  var _isTouchScreen = false;
+                  if ("ontouchstart" in window) {
+                    _isTouchScreen = true;
+                  } else if ("onpointerdown" in window) {
+                    _isTouchScreen = event.originalEvent.pointerType == "touch";
+                  } else if (window.MSPointerEvent) {
+                    _isTouchScreen =
+                      event.originalEvent.pointerType ==
+                      event.originalEvent.MSPOINTER_TYPE_TOUCH; // 2 ; http://blogs.msdn.com/b/ie/archive/2011/09/20/touch-input-for-ie10-and-metro-style-apps.aspx
+                  } else {
+                  }
+                  return _isTouchScreen;
+                }
+
+                var _isIE = isIE();
+                var _isIE9 = isIE9();
+                var isMegaMenu = $(".megamenu_first", menuContainer).length > 0;
+                var currentMenu = $(
+                  "> ul.dropdownmenu > li.active",
+                  menuContainer
+                );
+
+                $(function () {
+                  if (currentMenu.length == 0)
+                    currentMenu = $(
+                      "> ul.dropdownmenu > li.active",
+                      menuContainer
+                    );
+                });
+
+                if (
+                  ("ontouchstart" in window || // Chrome & Safari (IOS) && Firefox
+                    "onpointerdown" in window || // IE 11
+                    window.MSPointerEvent) && // IE 10
+                  $(window).width() > 648
+                ) {
+                  var eventName =
+                    "ontouchstart" in window
+                      ? "touchstart"
+                      : "onpointerdown" in window
+                      ? "pointerdown"
+                      : window.MSPointerEvent
+                      ? "MSPointerDown"
+                      : "";
+                  if (eventName.length > 0) {
+                    $(
+                      "> ul.dropdownmenu  li>a[data-navid]",
+                      menuContainer
+                    ).bind(eventName, function (event) {
+                      if (isTouchScreenEvent(event) == false) {
+                        return true;
+                      }
+
+                      var currentLevelAnchor = $(this);
+                      var currentLeveLi = currentLevelAnchor.closest("li");
+                      var firstLevelLi = currentLevelAnchor.closest(
+                        "li[id^='dropdownrootitem']"
+                      );
+                      var firstLevelAnchor = firstLevelLi.find(
+                        ">a[data-navid]"
+                      );
+                      var inFirstLevel =
+                        currentLevelAnchor[0] == firstLevelAnchor[0];
+
+                      var hasSubMenu =
+                        currentLevelAnchor.next("ul,div").length > 0;
+                      if (hasSubMenu) {
+                        $(this).closest("li").data("mouseDelay", 1);
+
+                        // Menu is not selected
+                        if (!firstLevelLi.hasClass("touch-active")) {
+                          if ($(this).attr("href")) {
+                            $(this).attr("data-href", $(this).attr("href"));
+                            $(this).attr("href", "javascript:void(0);");
+                          }
+                          $(menuContainer)
+                            .find(".touch-active")
+                            .removeClass("touch-active")
+                            .not(currentMenu)
+                            .removeClass("active");
+
+                          firstLevelLi.addClass("touch-active active");
+                          currentLevelAnchor.addClass("touch-active active");
+                          currentMenu.addClass("active");
+
+                          $(" li:not(.touch-active)", menuContainer)
+                            .not(firstLevelLi)
+                            .removeClass("_current");
+                          $(" li:not(.touch-active) li", menuContainer)
+                            .not(currentLeveLi)
+                            .removeClass("_current");
+
+                          $(
+                            "> ul.dropdownmenu > li:not(.touch-active) > a[data-navid]",
+                            menuContainer
+                          )
+                            .next()
+                            .css("display", "none");
+                          $(
+                            "> ul.dropdownmenu > li.touch-active > a[data-navid]",
+                            menuContainer
+                          )
+                            .next()
+                            .css("display", "block");
+
+                          event.preventDefault();
+                        }
+                        // Menu is selected
+                        else {
+                          if (inFirstLevel) {
+                            // non clickable
+                            if (currentLevelAnchor.attr("href") == undefined) {
+                              //has class touch-active and no link
+                              removeClassAndHideMenu();
+                              event.preventDefault();
+                            } else if ($(this).attr("data-href")) {
+                              //clickable, but href have been moved to data.
+                              $(this).attr("href", $(this).attr("data-href"));
+                            }
+                          } else {
+                            if (isMegaMenu) return true;
+
+                            if (!currentLeveLi.hasClass("touch-active")) {
+                              if ($(this).attr("href")) {
+                                $(this).attr("data-href", $(this).attr("href"));
+                                $(this).attr("href", "javascript:void(0);");
+                              }
+                              $(firstLevelLi)
+                                .find(".touch-active")
+                                .removeClass("touch-active")
+                                .not(currentMenu)
+                                .removeClass("active");
+                              currentLeveLi
+                                .parent()
+                                .children("li._current")
+                                .removeClass("_current");
+                              currentLeveLi.addClass(
+                                "touch-active active _current"
+                              );
+
+                              currentLevelAnchor.addClass(
+                                "touch-active active"
+                              );
+
+                              //$(' li:not(.touch-active)', menuContainer).not(firstLevelLi).removeClass('_current');
+                              //$(' li:not(.touch-active) li', menuContainer).not(currentLeveLi).removeClass('_current');
+
+                              $(
+                                " li:not(.touch-active) > a[data-navid]",
+                                currentLeveLi.parent()
+                              )
+                                .next()
+                                .css("display", "none");
+                              $(
+                                "> li.touch-active > a[data-navid]",
+                                currentLeveLi.parent()
+                              )
+                                .next()
+                                .css("display", "block");
+
+                              event.preventDefault();
+                            } else {
+                              if (
+                                currentLevelAnchor.attr("href") == undefined
+                              ) {
+                                //has class touch-active and no link
+                                removeClassAndHideMenu();
+                                event.preventDefault();
+                              } else if ($(this).attr("data-href")) {
+                                $(this).attr("href", $(this).attr("data-href"));
+                              }
+                            }
+                          }
+                        }
+                      }
+                    });
+                  }
+                }
+
+                function removeClassAndHideMenu() {
+                  $(menuContainer)
+                    .find("a.touch-active, li.touch-active")
+                    .removeClass("touch-active active");
+                  $("> ul.dropdownmenu > li > a[data-navid]", menuContainer)
+                    .next()
+                    .css("display", "none");
+                  // If we don't change the menu item, we should keep the old one.
+                  if (
+                    $("> ul.dropdownmenu > li.active", menuContainer).length ==
+                    0
+                  ) {
+                    currentMenu.addClass("active");
+                  }
+                }
+
+                $("body").bind(eventName, function (event) {
+                  if (isTouchScreenEvent(event) == false) {
+                    return true;
+                  }
+                  if (!$(event.target).closest("li.touch-active").length) {
+                    removeClassAndHideMenu();
+                  }
+                });
+              }
+              //);
+            </script>
+
+            <!--startindex-->
+            <!--!!WidgetEnd-->
+
+            <!--!!WidgetStart, vi-orderdata="0"  vi-hideonmobile="false" vi-widgetinstancedata="16417"WidgetStart!!-->
+            <style>
+              @media only screen and (min-width: 768px) {
+                .standardlayout .top_col {
+                  padding-top: 120px;
+                }
+                .page_template .standardlayout .top_col {
+                  padding-top: 0;
+                }
+                .standardthreecolumnlayout .top_col {
+                  padding-top: 120px;
+                }
+                .page_template .standardthreecolumnlayout .top_col {
+                  padding-top: 0;
+                }
+                .twocolumnswithbottomlayout .top_col {
+                  padding-top: 120px;
+                }
+                .page_template .twocolumnswithbottomlayout .top_col {
+                  padding-top: 0;
+                }
+                .onecolumnlayout .top_col {
+                  padding-top: 120px;
+                }
+                .page_template .onecolumnlayout .top_col {
+                  padding-top: 0;
+                }
+              }
+            </style>
+
+            <!--!!WidgetEnd-->
+
+            <!--!!WidgetStart, vi-orderdata="0"  vi-hideonmobile="false" vi-widgetinstancedata="15357"WidgetStart!!-->
+
+            <a id="pagebody"></a>
+            <header
+              id="widget_15357_10740_6193"
+              class="title_widget clearfix on_page"
+            >
+              <!--stopindex-->
+              <p class="breadcrumb">
+                <a href="https://www.sanjoseca.gov/your-government"
+                  >Your Government</a
+                >
+                »
+                <a href="https://www.sanjoseca.gov/your-government/departments"
+                  >Departments & Offices</a
+                >
+                »
+                <a
+                  href="https://www.sanjoseca.gov/your-government/departments/public-works"
+                  >Housing</a
+                >
+                »
+                <a
+                  href="https://www.sanjoseca.gov/your-government/departments-offices/city-maps"
+                  >Rent Assistance</a
+                >
+              </p>
+              <!--startindex-->
+
+              <!-- <h1 class="titlewidget-title"><span>Maps Gallery</span></h1> -->
+
+              <!--stopindex-->
+              <div class="title_right"></div>
+              <!--startindex-->
+            </header>
+            <script type="text/javascript">
+              $(function () {
+                var widgetContext = "widget_15357_10740_6193";
+
+                $("#" + widgetContext + " #share").click(function () {
+                  if (
+                    !$("#" + widgetContext + " div#share").hasClass(
+                      "click-active"
+                    )
+                  )
+                    $("#" + widgetContext + " div#share")
+                      .find("ul")
+                      .show();
+                  else
+                    $("#" + widgetContext + " div#share")
+                      .find("ul")
+                      .hide();
+                });
+
+                $("div").click(function () {
+                  if (
+                    $("#" + widgetContext + " div#share").hasClass(
+                      "click-active"
+                    )
+                  ) {
+                    $("#" + widgetContext + " div#share")
+                      .find("ul")
+                      .hide();
+                  }
+                });
+
+                $(document).click(function (e) {
+                  if (!$(e.target).closest("#share").length > 0) {
+                    $("#" + widgetContext + " div#share").removeClass(
+                      "click-active"
+                    );
+                    $("#" + widgetContext + " div#share")
+                      .find("ul")
+                      .hide();
+                  }
+                });
+
+                var shareContainerTimeout = null;
+                $("#" + widgetContext + " #share").bind(
+                  "mouseover",
+                  function () {
+                    //If not relate to click event
+                    if (shareContainerTimeout) {
+                      clearTimeout(shareContainerTimeout);
+                      shareContainerTimeout = null;
+                    }
+                    shareContainerTimeout = setTimeout(function () {
+                      if (
+                        !$("#" + widgetContext + " div#share").hasClass(
+                          "click-active"
+                        )
+                      )
+                        $("#" + widgetContext + " div#share")
+                          .find("ul")
+                          .show();
+                    }, 100);
+                  }
+                );
+
+                $("#" + widgetContext + " #share").bind(
+                  "mouseleave",
+                  function () {
+                    //If not relate to click event
+                    if (shareContainerTimeout) {
+                      clearTimeout(shareContainerTimeout);
+                      shareContainerTimeout = null;
+                    }
+                    shareContainerTimeout = setTimeout(function () {
+                      if (
+                        !$("#" + widgetContext + " div#share").hasClass(
+                          "click-active"
+                        )
+                      )
+                        $("#" + widgetContext + " div#share")
+                          .find("ul")
+                          .hide();
+                    }, 200);
+                  }
+                );
+
+                $("header#" + widgetContext + " a.feedback_link").click(
+                  function () {
+                    var windowHeight = 485;
+                    if (window.innerWidth <= 648) {
+                      windowHeight = 545;
+                    }
+                    var opts = {
+                      title: "Feedback",
+                      url:
+                        "/Template/GetFeedbackPartial?feedbackUrl=https%3a%2f%2fwww.sanjoseca.gov%2fyour-government%2fdepartments%2fpublic-works%2fmaps-resources",
+                      useFrame: true,
+                      height: windowHeight,
+                      onClosed: function (result) {
+                        if (result != undefined && result.IsOk == true) {
+                          $.refreshTempMessage(result.Message);
+                        }
+                      },
+                      skin: "viClientDialog feedback_lightbox",
+                      fixed: false,
+                    };
+                    $.viClientDialog(opts).open();
+                  }
+                );
+
+                //Safari iOS: No click event
+                $("header#" + widgetContext + " a.send_share_email").bind(
+                  "click touchstart",
+                  function () {
+                    var shareEmailTitle = document.itemTitle
+                      ? encodeURIComponent(document.itemTitle.trim()).replace(
+                          /[!'()*]/g,
+                          escape
+                        )
+                      : "Maps+Gallery";
+                    var opts = {
+                      title: "Click to submit an email online",
+                      url:
+                        "/Template/GetShareEmailPartial?shareUrl=https%3a%2f%2fwww.sanjoseca.gov%2fyour-government%2fdepartments%2fpublic-works%2fmaps-resources" +
+                        "&shareTitle=" +
+                        shareEmailTitle,
+                      useFrame: true,
+                      height: 485,
+                      onClosed: function (result) {
+                        if (result != undefined && result.IsOk == true) {
+                          $.refreshTempMessage(result.Message);
+                        }
+                      },
+                      skin: "viClientDialog send_share_email_lightbox",
+                      fixed: false,
+                    };
+                    $.viClientDialog(opts).open();
+                  }
+                );
+              });
+            </script>
+
+            <!--!!WidgetEnd-->
+
+            <!--!!WidgetStart, vi-orderdata="0"  vi-hideonmobile="false" vi-widgetinstancedata="15359"WidgetStart!!-->
+            <div
+              id="widget_15359_10739_6193"
+              class="content_area normal_content_area clearfix"
+            >
+              <iframe
+                src="http://localhost:3000/app/survey"
+                scrolling="yes"
+                width="100%"
+                height="1200"
+              ></iframe>
+            </div>
+            <!--!!WidgetEnd-->
+          </div>
+        </div>
+
+        <footer id="page_footer" class="">
+          <!--stopindex-->
+
+          <div id="footercolumn" class="site_template_column footer_column">
+            <!--stopindex-->
+
+            <div class="social_icons">
+              <a
+                href="https://www.facebook.com/CityofSanJose"
+                target="_blank"
+                title="City of San Jose Facebook"
+              >
+                <img
+                  src="https://www.sanjoseca.gov/home/showpublishedimage/1094/636640569203100000"
+                  alt="facebook"
+                />
+              </a>
+              <a
+                href="https://www.twitter.com/CityofSanJose"
+                target="_blank"
+                title="City of San Jose Twitter"
+              >
+                <img
+                  src="https://www.sanjoseca.gov/home/showpublishedimage/1100/636640569211230000"
+                  alt="twitter"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/cityofsanjose/"
+                target="_blank"
+                title="Visit San Jose Instagram"
+              >
+                <img
+                  src="https://www.sanjoseca.gov/home/showpublishedimage/8511/637049162148530000"
+                  alt="IG Logo1"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/cityofsanjose/"
+                target="_blank"
+                title="City of San Jose LinkedIn"
+              >
+                <img
+                  src="https://www.sanjoseca.gov/home/showpublishedimage/1098/636640569208570000"
+                  alt="linkedin"
+                />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCeDiMzJEUbPgaruDcXnD4Cg"
+                target="_blank"
+                title="City of San Jose YouTube"
+              >
+                <img
+                  src="https://www.sanjoseca.gov/home/showpublishedimage/1102/636640569214670000"
+                  alt="youtube"
+                />
+              </a>
+              <a
+                href="https://www.nextdoor.com/find-neighborhood/"
+                target="_blank"
+                title="Find Neighborhood"
+              >
+                <img
+                  src="https://www.sanjoseca.gov/home/showpublishedimage/1096/636640569205770000"
+                  alt="home"
+                />
+              </a>
+            </div>
+            <a
+              href="javascript:void(0);"
+              class="interior-scroll-up desktop_only"
+              >Scroll up</a
+            >
+
+            <!--startindex-->
+
+            <!--stopindex-->
+
+            <div class="col-sm-5">
+              <div class="footer_info">
+                <h2>Contact us</h2>
+                <a
+                  href="https://www.sanjoseca.gov/residents/report-an-issue"
+                  target="_blank"
+                  >Report an issue</a
+                ><br />
+                <a
+                  href="https://www.google.com/maps/place/San+Jose+City+Hall,+200+E+Santa+Clara+St,+San+Jose,+CA+95112/@37.3377081,-121.8881115,17z/data=!3m1!4b1!4m5!3m4!1s0x808fccbc3661e19b:0xcf74892830c738be!8m2!3d37.3377081!4d-121.8859228"
+                  target="_blank"
+                  >200 E. Santa Clara St.<br />
+                  San Jose, Ca 95113 </a
+                ><br />
+                <a href="tel:4085353500">408 535-3500 - Main</a><br />
+                <a href="tel:8007352922">800 735-2922 - TTY</a>
+              </div>
+            </div>
+
+            <!--startindex-->
+
+            <!--stopindex-->
+
+            <div class="col-sm-3">
+              <div class="footer_nav">
+                <h2>Need More Info?</h2>
+                <a
+                  href="https://sanjose.legistar.com/Calendar.aspx"
+                  target="_blank"
+                  >Meeting Agendas</a
+                >
+                <a
+                  href="https://www.sanjoseca.gov/news-stories/city-calendar"
+                  target="_self"
+                  >City Calendar</a
+                >
+                <a
+                  href="https://www.sanjoseca.gov/residents/accessibility-instructions"
+                  target="_self"
+                  >Accessibility</a
+                >
+                <a
+                  href="https://www.sanjoseca.gov/home/showdocument?id=17869"
+                  target="_blank"
+                  >E-Government Policy</a
+                >
+                <a
+                  href="https://www.sanjoseca.gov/residents/advanced-components/sitemap"
+                  target="_self"
+                  >Sitemap</a
+                >
+              </div>
+            </div>
+
+            <!--startindex-->
+
+            <div class="col-sm-2">
+              <div class="footer_nav">
+                <h2>Employees</h2>
+                <a
+                  href="https://sjhpss.hosted.cherryroad.com/psp/sjhpss/ESS/HRMS/?cmd=login&languageCd=ENG&"
+                  target="_blank"
+                  >Access eWay</a
+                >
+                <a
+                  href="https://www.sanjoseca.gov/Home/ShowDocument?id=11915"
+                  target="_blank"
+                  >Code of Ethics</a
+                >
+                <a href="http://office.sanjoseca.gov/" target="_blank"
+                  >Web Mail</a
+                >
+              </div>
+            </div>
+
+            <!--stopindex-->
+
+            <div class="col-xs-5 col-sm-2 footer_logo_wrapper">
+              <div class="footer_logo">
+                <img
+                  src="https://www.sanjoseca.gov/home/showpublishedimage/13635/637565835595900000"
+                  alt="CDG20 DigCities Survey Winner_3x3_new"
+                />
+              </div>
+            </div>
+
+            <!--startindex-->
+          </div>
+
+          <!--startindex-->
+        </footer>
+      </div>
+    </div>
+
+    <script
+      src="https://www.sanjoseca.gov/Project/Contents/Main/mobile_nav_scripts.js"
+      type="text/javascript"
+    ></script>
+    <script src="https://www.sanjoseca.gov/Project/Contents/Main/bootstrap/bootstrap.min.js"></script>
+
+    <script src="https://www.sanjoseca.gov/Project/Contents/Main/Scripts/isotope.pkgd.min.js"></script>
+
+    <script
+      src="https://www.sanjoseca.gov/Project/Contents/Main/sitelayout_scripts.js"
+      type="text/javascript"
+    ></script>
+
+    <script>
+      $(function () {
+        $(".reComment[comment]")
+          .removeClass("reComment")
+          .removeAttr("comment")
+          .removeAttr("author")
+          .removeAttr("title")
+          .removeAttr("timestamp");
+      });
+    </script>
+
+    <script src="https://www.sanjoseca.gov/Scripts/ScriptBundleVisionFrontend.jsbnd?v=o4ZM98ehVrgKmLskQgabKMa0kKQrjPCZcfrko0au7oM1"></script>
+
+    <!-- assistant bot -->
+
+    <div id="sj-assistant"></div>
+    <style>
+      :root {
+        --action: #ff575c;
+        --primary: #ebc426;
+      }
+    </style>
+    <script
+      src="https://sanjoseresidentassistant.com/assistant.js"
+      async
+      defer
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://customer.cludo.com/scripts/bundles/search-script.min.js"
+    ></script>
+    <script>
+      var CludoSearch;
+      (function () {
+        var cludoSettings = {
+          customerId: 10000748,
+          engineId: 10001110,
+          searchUrl: "https://www.sanjoseca.gov/residents/search",
+          language: "en",
+          searchInputs: ["cludo-search-form"],
+          template: "InlineBasic",
+          hideSearchFilters: true,
+          focusOnResultsAfterSearch: true,
+          type: "inline",
+        };
+        CludoSearch = new Cludo(cludoSettings);
+        CludoSearch.init();
+      })();
+    </script>
+    <!--[if lte IE 9]>
+      <script
+        src="https://api.cludo.com/scripts/xdomain.js"
+        slave="https://api.cludo.com/proxy.html"
+        type="text/javascript"
+      ></script>
+    <![endif]-->
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-M9J6V95"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <script>
+      try {
+        manualRenderMobile();
+      } catch (err) {}
+    </script>
+
+    <script src="https://www.sanjoseca.gov/Scripts/Components/ScriptsFEBundle.jsbnd?v=DfCheCkfQMyVRQ54roqWjDiD8YP5vK1eHdrpyN5Pqmo1"></script>
+
+    <script>
+      $(function () {
+        var sitewrapper = $(".sitewrapper");
+        if (sitewrapper.length && !sitewrapper.hasClass("")) {
+          sitewrapper.addClass("");
+        }
+      });
+    </script>
+  </body>
+</html>
