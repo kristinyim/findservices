@@ -75,7 +75,13 @@ export default function Survey() {
       if (isIntroPage) {
         setStep(Math.min(size, step + 1));
       } else {
+        console.log("IS TENANT FLOW");
+        console.log(isTenantFlow());
         for (let index = step; index < size; index++) {
+          console.log("ISTENANTSECTION");
+          console.log(isTenantSection(index));
+          console.log("ISLANDLORD");
+          console.log(isLandlordSection(index));
           if (
             (isTenantFlow() && isTenantSection(index)) ||
             (!isTenantFlow() && isLandlordSection(index))
@@ -125,7 +131,10 @@ export default function Survey() {
   const isTenantFlow = () => {
     const initSection = survey[0];
     const questionKey = _.values(initSection)[0][0];
-    return responses[questionKey] === "OPT_1";
+    console.log(responses[questionKey]);
+    console.log(responses[questionKey] == 1);
+    console.log("BREAK");
+    return responses[questionKey] == 1;
   };
 
   const isTenantSection = (step) => {

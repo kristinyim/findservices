@@ -52,7 +52,6 @@ function MultiQuestion(props) {
       );
     }
 
-    console.log("MultiQuestion: ", value);
     return (
       <Form.Group as="fieldset" className={error ? "error" : null} grouped>
         <legend>{t(`catalog:${questionKey}.text`)}</legend>

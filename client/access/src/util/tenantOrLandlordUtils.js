@@ -18,5 +18,5 @@ export const isTenantFlow = (survey, responses) => {
   }
   const initSection = survey[0];
   const questionKey = _.values(initSection)[0][0];
-  return responses[questionKey] === "OPT_1";
+  return responses[questionKey] == 1;
 };
