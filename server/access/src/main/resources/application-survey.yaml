@@ -1,21 +1,22 @@
 maslow:
   catalog:
     survey:
-      - SECTION_YOURSELF:
-          - IS_EMPLOYMENT_AFFECTED
-          - IS_WORRIED_HOUSING
-          - IS_WORRIED_FOOD
-      - SECTION_HOUSEHOLD:
-          - HOUSEHOLD_SIZE
-          - HOUSEHOLD_EMPLOYED
-          - HOUSEHOLD_INCOME
-          - ADULTS_60_PLUS
-          - CHILDREN_06_17
-          - CHILDREN_00_05
-      - SECTION_SITUATION:
-          - IS_COVID
-          - IS_PAY_FOR_DEPENDENT_CARE
-          - IS_PREGNANT
-          - IS_DISABLED
-          - IS_MILITARY
-          - IS_STUDENT
+      - SECTION_IAMA:
+          - IAMA
+      - SECTION_TENANT_SITUATION:
+          - EMPLOYMENT_SITUATION
+          - MONTHLY_INCOME
+          - RESIDENTIAL_SITUATION
+          - MONTHLY_RENT
+          - TENANT_RENT_OWED
+          - TENANT_ZIP_CODE
+      - SECTION_TENANT_DOCUMENTS:
+          - IDENTIFICATION
+          - PROOF_OF_INCOME
+          - TAX_FORM
+          - PROOF_OF_RESIDENCE
+          - RENT_DUE
+      - SECTION_LANDLORD_SITUATION:
+          - UNITS_OWNED
+          - UNITS_PAYING_RENT
+          - LANDLORD_ZIP_CODE

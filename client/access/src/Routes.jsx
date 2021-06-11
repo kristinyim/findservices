@@ -12,7 +12,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Redirect, Route, Switch } from "react-router-dom";
 import RouteGuard from "RouteGuard";
-import isResponseMissing from "util/isResponseMissing";
+import isTenantOrLandlordResponseMissing from "util/isTenantOrLandlordResponseMissing";
 
 /**
  * @returns {React.ReactElement} Routes the supported paths to components
@@ -42,7 +42,7 @@ function Routes() {
         </AppLayout>
       </Route>
       <RouteGuard
-        when={isResponseMissing(survey, responses)}
+        when={isTenantOrLandlordResponseMissing(survey, responses)}
         redirectPath="/app/survey"
         path="/app/review"
       >
@@ -55,7 +55,7 @@ function Routes() {
         <Review />
       </RouteGuard>
       <RouteGuard
-        when={isResponseMissing(survey, responses)}
+        when={isTenantOrLandlordResponseMissing(survey, responses)}
         redirectPath="/app/survey"
         path="/app/services"
       >

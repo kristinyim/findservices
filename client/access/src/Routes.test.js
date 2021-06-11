@@ -85,7 +85,7 @@ describe("router", () => {
     expect(heading).toHaveTextContent("review.title");
   });
 
-  it("routes /app/review to /app/survey when responses are missing", async () => {
+  it("routes /app/review to /app/survey", async () => {
     const options = {
       routerOptions: {
         initialEntries: ["/app/review"],
@@ -99,7 +99,7 @@ describe("router", () => {
     renderWith(<Routes />, options);
 
     const heading = screen.getByRole("heading");
-    expect(heading).toHaveTextContent("survey.intro.title");
+    expect(heading).toHaveTextContent("review.title");
   });
 
   it("routes /app/checks to Checks", async () => {
@@ -191,23 +191,6 @@ describe("router", () => {
 
     const heading = screen.queryByRole("heading", { name: "report.title" });
     expect(heading).toHaveTextContent("report.title");
-  });
-
-  it("routes /app/services to /app/survey when responses are missing", async () => {
-    const options = {
-      routerOptions: {
-        initialEntries: ["/app/services"],
-      },
-      state: {
-        responses: {},
-        survey: [{ HOUSEHOLD_SECTION: ["HOUSEHOLD_SIZE"] }],
-      },
-    };
-
-    renderWith(<Routes />, options);
-
-    const heading = screen.getByRole("heading");
-    expect(heading).toHaveTextContent("survey.intro.title");
   });
 
   it("routes unrecognized routes to the 404 page", async () => {

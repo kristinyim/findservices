@@ -38,6 +38,7 @@ export default function Survey() {
 
   const isErrorPage = size === 0;
   const isIntroPage = step === 0 && size > 0;
+  const isTenantOrLandlordPage = step === 1 && size > 1;
   const isFinalPage = step >= size;
 
   const [error, setError] = useState(false);
@@ -62,7 +63,7 @@ export default function Survey() {
     return complete;
   };
 
-  const handleNext = () => {
+  const handleNext = (e) => {
     const isValid = validateResponses();
     if (isValid) {
       if (!isIntroPage) {
@@ -71,7 +72,20 @@ export default function Survey() {
       // Initially do not show an error on next page even if previously we have
       // shown one.
       setError(false);
-      setStep(Math.min(size, step + 1));
+      if (isIntroPage) {
+        setStep(Math.min(size, step + 1));
+      } else {
+        for (let index = step; index < size; index++) {
+          if (
+            (isTenantFlow() && isTenantSection(index)) ||
+            (!isTenantFlow() && isLandlordSection(index))
+          ) {
+            setStep(Math.min(index + 1, size));
+            return;
+          }
+        }
+        handleDone(e);
+      }
     }
   };
 
@@ -89,7 +103,37 @@ export default function Survey() {
     evt.preventDefault();
     // Can navigate backwards even if responses on current page are not valid.
     setError(false);
-    setStep(Math.max(0, step - 1));
+    // If on tenant or landlord selection page, go back to starting page.
+    if (isTenantOrLandlordPage) {
+      setStep(0);
+      return;
+    }
+    // Otherwise search for other sections in same flow or default back
+    // to the tenant or landlord selection page.
+    for (let index = step - 2; index >= 0; index--) {
+      if (
+        (isTenantFlow() && isTenantSection(index)) ||
+        (!isTenantFlow() && isLandlordSection(index))
+      ) {
+        setStep(Math.max(index + 1, 0));
+        return;
+      }
+    }
+    setStep(1);
+  };
+
+  const isTenantFlow = () => {
+    const initSection = survey[0];
+    const questionKey = _.values(initSection)[0][0];
+    return responses[questionKey] === "OPT_1";
+  };
+
+  const isTenantSection = (step) => {
+    return _.keys(survey[step])[0].startsWith("SECTION_TENANT");
+  };
+
+  const isLandlordSection = (step) => {
+    return _.keys(survey[step])[0].startsWith("SECTION_LANDLORD");
   };
 
   /**
