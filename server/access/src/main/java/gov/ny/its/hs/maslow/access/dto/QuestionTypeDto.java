@@ -21,6 +21,11 @@ public enum QuestionTypeDto {
   NUMBER,
 
   /**
+   * The question response must be a valid zipcode.
+   */
+  ZIPCODE,
+
+  /**
    * The question response must be a non-negative integer representing a
    * choice out of multiple options
    */

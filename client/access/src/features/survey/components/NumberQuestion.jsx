@@ -5,7 +5,8 @@ import { useTranslation } from "react-i18next";
 import { Form, Input, Message } from "semantic-ui-react";
 
 /**
- * Renders a question of type NUMBER or CURRENCY as a number-typed form input.
+ * Renders a question of type NUMBER or CURRENCY or ZIPCODE as a number-typed
+ * form input.
  * This component is intended to be used as a controlled component -- that is,
  * it requires that the parent provides values for both the {@linkcode #value}
  * and {@linkcode #onChange} props.
@@ -84,7 +85,7 @@ NumberQuestion.propTypes = {
   /** The key of the question to be rendered. */
   questionKey: PropTypes.string.isRequired,
   /** The type of the question to be rendered. */
-  questionType: PropTypes.oneOf(["NUMBER", "CURRENCY"]).isRequired,
+  questionType: PropTypes.oneOf(["NUMBER", "CURRENCY", "ZIPCODE"]).isRequired,
   /** The current value of the question. */
   value: PropTypes.string.isRequired,
   /** The function to be called when the value changes. */

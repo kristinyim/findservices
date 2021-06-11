@@ -86,6 +86,7 @@ export class QuestionFactory {
         return { Question: BooleanQuestion, Converter: BooleanConverter };
       case "CURRENCY":
       case "NUMBER":
+      case "ZIPCODE":
         return { Question: NumberQuestion, Converter: NumberConverter };
       case "MULTI":
         return { Question: MultiQuestion, Converter: MultiConverter };

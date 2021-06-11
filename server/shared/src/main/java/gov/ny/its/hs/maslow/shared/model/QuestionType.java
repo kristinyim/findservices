@@ -21,7 +21,12 @@ public enum QuestionType {
   NUMBER,
 
   /**
+   * The question response must be a valid zipcode.
+   */
+  ZIPCODE,
+
+  /**
    * The question response must be a one of the options
    */
-  MULTI
+  MULTI,
 }

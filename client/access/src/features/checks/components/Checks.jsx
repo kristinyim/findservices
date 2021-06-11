@@ -193,6 +193,9 @@ function getExampleResponses(questions) {
       case "NUMBER": {
         return 1000;
       }
+      case "ZIPCODE": {
+        return 94043;
+      }
       default:
       case "BOOLEAN": {
         return true;
