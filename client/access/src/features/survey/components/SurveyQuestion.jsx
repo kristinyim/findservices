@@ -88,7 +88,8 @@ export class QuestionFactory {
       case "NUMBER":
       case "ZIPCODE":
         return { Question: NumberQuestion, Converter: NumberConverter };
-      case "MULTI":
+      case "MULTI_RADIO":
+      case "MULTI_DROPDOWN":
         return { Question: MultiQuestion, Converter: MultiConverter };
       default:
         throw new Error("Invalid question type.");
@@ -133,8 +134,14 @@ SurveyQuestion.propTypes = {
   /** The key of the question to be rendered. */
   questionKey: PropTypes.string.isRequired,
   /** The type of the question to be rendered. */
-  questionType: PropTypes.oneOf(["BOOLEAN", "CURRENCY", "NUMBER", "MULTI"])
-    .isRequired,
+  questionType: PropTypes.oneOf([
+    "BOOLEAN",
+    "CURRENCY",
+    "NUMBER",
+    "ZIPCODE",
+    "MULTI_RADIO",
+    "MULTI_DROPDOWN",
+  ]).isRequired,
   /** If true, the question should validate that there is a valid response. */
   error: PropTypes.bool,
 };

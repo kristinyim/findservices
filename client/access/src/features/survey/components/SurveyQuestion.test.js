@@ -119,11 +119,9 @@ describe("SurveyQuestion", () => {
     });
   });
 
-
   describe("with MULTI type", () => {
     // TODO: create tests for MULTI question
   });
-
 
   describe("with BooleanConverter", () => {
     it.each([
@@ -175,18 +173,18 @@ describe("SurveyQuestion", () => {
     });
   });
 
-
   describe("with MultiConverter", () => {
     // TODO: create tests for MultiConverter
   });
-
 
   describe("with QuestionFactory", () => {
     it.each([
       ["BOOLEAN", BooleanQuestion, BooleanConverter],
       ["CURRENCY", NumberQuestion, NumberConverter],
       ["NUMBER", NumberQuestion, NumberConverter],
-      ["MULTI", MultiQuestion, MultiConverter],
+      ["ZIPCODE", NumberQuestion, NumberConverter],
+      ["MULTI_RADIO", MultiQuestion, MultiConverter],
+      ["MULTI_DROPDOWN", MultiQuestion, MultiConverter],
     ])("returns correct types for %s", (type, QuestionType, ConverterType) => {
       const { Question, Converter } = QuestionFactory.create(type);
       expect(Question).toBe(QuestionType);

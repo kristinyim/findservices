@@ -9,12 +9,21 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { Header } from "semantic-ui-react";
 
-/** Returns the chosen option text for a MULTI question */
+/** Returns the chosen option text for MULTI_DROPDOWN and MULTI_RADIO questions */
 function getOptionText(t, questionKey, idx) {
   const options = t(`catalog:${questionKey}.options`, { returnObjects: true });
   // Check if we actually have options defined
   if (options != null && typeof options === "object") {
-    return options[idx - 1];
+    var result = options[idx - 1];
+    // TODO: This fixes a replacement of "Yes" string into "true"
+    // and "No" into "false" hidden somewhere in the code. There must be a proper way to fix it.
+    if (result === "true") {
+      result = "Yes";
+    }
+    if (result === "false") {
+      result = "No";
+    }
+    return result;
   }
   return "ERROR";
 }
@@ -117,7 +126,7 @@ const isBooleanAndFalse = (responses, questionKey, type) => {
 };
 
 const isMulti = (responses, questionKey, type) => {
-  return type === "MULTI";
+  return type === "MULTI_RADIO" || type === "MULTI_DROPDOWN";
 };
 
 // Determines if a question is answered and has a numeric value.

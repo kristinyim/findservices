@@ -26,7 +26,9 @@ public enum QuestionType {
   ZIPCODE,
 
   /**
-   * The question response must be a one of the options
+   * The question is rendered either as a radio button group or a dropdown menu.
+   * The question response must be a one of the options.
    */
-  MULTI,
+  MULTI_RADIO,
+  MULTI_DROPDOWN,
 }

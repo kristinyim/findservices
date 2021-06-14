@@ -4,27 +4,36 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Form, Message } from "semantic-ui-react";
 
-// Returns a list of options for a MULTI question
+// Returns a list of options for MULTI_RADIO and MULTI_DROPDOWN questions
 function getOptions(t, questionKey) {
   const options = t(`catalog:${questionKey}.options`, { returnObjects: true });
   // Check if we actually have options defined
   if (options != null && typeof options === "object") {
+    for (const [idx, option] of options.entries()) {
+      console.log("option: ", option);
+      // TODO: This fixes a replacement of "Yes" string into "true"
+      // and "No" into "false" hidden somewhere in the code. There must be a proper way to fix it.
+      if (option === "true") {
+        options[idx] = "Yes";
+      }
+      if (option === "false") {
+        options[idx] = "No";
+      }
+    }
     return options;
   }
   return ["ERROR"];
 }
 
 /**
- * Renders a question of type MULTI as an accessible radio group with options
- * loaded from catalog. This component is intended to be used as a controlled
+ * Renders a question of types MULTI_RADIO and MULTI_DROPDOWN as a radio group or
+ * dropdown menu with options loaded from catalog.
+ * This component is intended to be used as a controlled
  * component -- that is, it requires that the parent provide values for both the
  * {@linkcode #value} and {@linkcode #onChange} props.
  */
-/**
- * For Dropdown UI see https://www.telerik.com/kendo-react-ui/components/dropdowns/dropdownlist/
- */
-function MultiQuestion(props) {
-  const { questionKey, value, onChange, error } = props;
+function MultiQuestion({ questionKey, questionType, value, onChange, error }) {
+  console.log("AAAAAAAAAAAAAA: ", questionType);
 
   const { t } = useTranslation();
   const questionId = kebabCase(questionKey);
@@ -32,9 +41,9 @@ function MultiQuestion(props) {
 
   // The question is rendered as a dropdown menu when true,
   // radio buttons otherwise.
-  const renderDropDown = true;
+  //const renderDropDown = true;
 
-  if (renderDropDown) {
+  if (questionType === "MULTI_DROPDOWN") {
     for (const [index, optionLabel] of getOptions(t, questionKey).entries()) {
       options.push(
         <option
@@ -52,7 +61,6 @@ function MultiQuestion(props) {
       );
     }
 
-    console.log("MultiQuestion: ", value);
     return (
       <Form.Group as="fieldset" className={error ? "error" : null} grouped>
         <legend>{t(`catalog:${questionKey}.text`)}</legend>
@@ -73,8 +81,8 @@ function MultiQuestion(props) {
         )}
       </Form.Group>
     );
-    // Render radiobuttons otherwise
   } else {
+    // Render radiobuttons otherwise
     for (const [index, optionLabel] of getOptions(t, questionKey).entries()) {
       options.push(
         <Form.Radio
@@ -114,6 +122,8 @@ function MultiQuestion(props) {
 MultiQuestion.propTypes = {
   /** The key of the question to be rendered. */
   questionKey: PropTypes.string.isRequired,
+  /** The type of the question to be rendered. */
+  questionType: PropTypes.oneOf(["MULTI_RADIO", "MULTI_DROPDOWN"]).isRequired,
   /** The current value of the question. */
   value: PropTypes.oneOf(["0", "1", "2", ""]).isRequired,
   /** The function to be called when the value changes. */
@@ -129,6 +139,7 @@ MultiQuestion.propTypes = {
 };
 
 MultiQuestion.defaultProps = {
+  questionType: "MULTI_DROPDOWN",
   error: true,
 };
 

@@ -29,5 +29,6 @@ public enum QuestionTypeDto {
    * The question response must be a non-negative integer representing a
    * choice out of multiple options
    */
-  MULTI,
+  MULTI_RADIO,
+  MULTI_DROPDOWN,
 }

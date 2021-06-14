@@ -200,7 +200,8 @@ function getExampleResponses(questions) {
       case "BOOLEAN": {
         return true;
       }
-      case "MULTI": {
+      case "MULTI_DROPDOWN":
+      case "MULTI_RADIO": {
         return 1;
       }
     }

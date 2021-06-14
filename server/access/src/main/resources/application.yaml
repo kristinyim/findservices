@@ -73,11 +73,11 @@ maslow:
           en:
             text: Is anyone 5 years old or younger?
       IS_EMPLOYMENT_AFFECTED:
-        type: MULTI
+        type: MULTI_DROPDOWN
         resources:
           en:
             text: Are you unemployed, furloughed, or working reduced hours?
-            options: [ Yeah, Nope, Sometimes, Maybe, Prefer not to answer ]
+            options: [Yes, No, Sometimes, Maybe, Prefer not to answer, Or not]
       IS_PAY_FOR_DEPENDENT_CARE:
         type: BOOLEAN
         resources:
