@@ -10,7 +10,6 @@ function getOptions(t, questionKey) {
   // Check if we actually have options defined
   if (options != null && typeof options === "object") {
     for (const [idx, option] of options.entries()) {
-      console.log("option: ", option);
       // TODO: This fixes a replacement of "Yes" string into "true"
       // and "No" into "false" hidden somewhere in the code. There must be a proper way to fix it.
       if (option === "true") {
@@ -33,8 +32,6 @@ function getOptions(t, questionKey) {
  * {@linkcode #value} and {@linkcode #onChange} props.
  */
 function MultiQuestion({ questionKey, questionType, value, onChange, error }) {
-  console.log("AAAAAAAAAAAAAA: ", questionType);
-
   const { t } = useTranslation();
   const questionId = kebabCase(questionKey);
   const options = [];
