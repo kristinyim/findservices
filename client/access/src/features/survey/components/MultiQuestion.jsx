@@ -99,8 +99,12 @@ function MultiQuestion({ questionKey, questionType, value, onChange, error }) {
     }
 
     return (
-      <Form.Group as="fieldset" className={error ? "error" : null} grouped>
-        <legend>{t(`catalog:${questionKey}.text`)}</legend>
+      <Form.Group
+        as="fieldset"
+        className={error ? "error required" : "required"}
+        grouped
+      >
+        <label>{t(`catalog:${questionKey}.text`)}</label>
         <small>{t(`catalog:${questionKey}.hint`, "")}</small>
         {options}
         {error && (

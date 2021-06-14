@@ -27,20 +27,136 @@ maslow:
 
   catalog:
     sections:
-      SECTION_YOURSELF:
+      SECTION_IAMA:
         resources:
           en:
-            title: Tell us about yourself
-      SECTION_HOUSEHOLD:
+            title: "Rental Assitance Tool"
+      SECTION_TENANT_SITUATION:
+        type: TENANT
         resources:
           en:
-            title: Tell us about your living situation
-      SECTION_SITUATION:
+            title: Describe your situation as a tenant
+      SECTION_TENANT_DOCUMENTS:
+        type: TENANT
         resources:
           en:
-            title: Tell us about the people you live with
+            title: Select the documents you have access to
+      SECTION_LANDLORD_SITUATION:
+        type: LANDLORD
+        resources:
+          en:
+            title: Describe your situation as a landlord
+            hint: You must include your W9 for city or state assistance
 
     questions:
+      IAMA:
+        type: MULTI_DROPDOWN
+        resources:
+          en:
+            text: I'm a...
+            options: [Tenant, Landlord]
+      EMPLOYMENT_SITUATION:
+        type: MULTI_DROPDOWN
+        resources:
+          en:
+            text: Employment situation
+            options:
+              [
+                "I lost my job due to COVID-related reasons (Ex: Layoffs due to business loss from COVID; lost job due to COVID-related health issues",
+                "I lost my job, but not due to COVID-related reasons",
+                "I'm employed, but having trouble paying rent / bills",
+                "I only recently started a job, but owe in back rent",
+                "I don't have a fixed schedule",
+              ]
+      MONTHLY_INCOME:
+        type: CURRENCY
+        resources:
+          en:
+            text: Monthly income estimate
+      RESIDENTIAL_SITUATION:
+        type: MULTI_DROPDOWN
+        resources:
+          en:
+            text: Residential situation
+            options:
+              [
+                My landlord is about to evict me and I need to understand the process or how to stop it,
+                My landlord can help me with the process of getting aid,
+                I don't want my landlord to help me with getting aid,
+              ]
+      MONTHLY_RENT:
+        type: CURRENCY
+        resources:
+          en:
+            text: This month's rent amount
+      TENANT_RENT_OWED:
+        type: CURRENCY
+        resources:
+          en:
+            text: How much rent I owe to date
+      TENANT_ZIP_CODE:
+        type: NUMBER
+        resources:
+          en:
+            text: Zip code
+      IDENTIFICATION:
+        type: MULTI_DROPDOWN
+        resources:
+          en:
+            text: Identification
+            options:
+              [
+                State-issued program ID,
+                State-issued license,
+                Employment ID card,
+              ]
+      PROOF_OF_INCOME:
+        type: MULTI_DROPDOWN
+        resources:
+          en:
+            text: Proof of income
+            options:
+              [I filed my 2020 taxes already, I haven't filed my 2020 taxes yet]
+      TAX_FORM:
+        type: MULTI_DROPDOWN
+        resources:
+          en:
+            text: Tax form
+            options: [Filed 2020 IRS Form 1040/1040A, Option 2]
+      PROOF_OF_RESIDENCE:
+        type: MULTI_DROPDOWN
+        resources:
+          en:
+            text: Proof of residence
+            options: [Filed 2020 IRS Form 1040/1040A, Option 2]
+      RENT_DUE:
+        type: MULTI_DROPDOWN
+        resources:
+          en:
+            text: Rent due
+            options: [Lease agreement, Option 2]
+      UNITS_OWNED:
+        type: MULTI_DROPDOWN
+        resources:
+          en:
+            text: How many units do you own?
+            options: [1-10 units, 11-50 units, Over 50 units]
+      UNITS_PAYING_RENT:
+        type: MULTI_DROPDOWN
+        resources:
+          en:
+            text: How many units pay rent each month?
+            options: [1-10 units, 11-50 units, Over 50 units]
+      LANDLORD_ZIP_CODE:
+        type: NUMBER
+        resources:
+          en:
+            text: Zip code
+      LANDLORD_RENT_OWED:
+        type: CURRENCY
+        resources:
+          en:
+            text: Total rent owed
       HOUSEHOLD_SIZE:
         type: NUMBER
         resources:
@@ -77,7 +193,7 @@ maslow:
         resources:
           en:
             text: Are you unemployed, furloughed, or working reduced hours?
-            options: [Yes, No, Sometimes, Maybe, Prefer not to answer, Or not]
+            options: [Yes, No, Prefer not to answer]
       IS_PAY_FOR_DEPENDENT_CARE:
         type: BOOLEAN
         resources:
