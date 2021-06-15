@@ -5,7 +5,6 @@ import UpdateService from "features/updateService/UpdateService";
 import UpdateServiceLocale from "features/updateServiceLocale/UpdateServiceLocale";
 import HttpError from "components/HttpError";
 import { useTranslation } from "react-i18next";
-import Authentication from "features/authentication/Authentication";
 
 /**
  * @returns {React.ReactElement} Routes the supported paths to components
@@ -18,7 +17,6 @@ function Routes() {
       <Route exact path="/">
         <Redirect to="/app/services" push={true} />
       </Route>
-      <Route path="/login" component={Authentication} />
       <Route
         path="/app/services/create"
         render={() => <UpdateService isNew={true} />}
