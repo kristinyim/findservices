@@ -50,13 +50,13 @@ maslow:
 
     questions:
       IAMA:
-        type: MULTI_DROPDOWN
+        type: MULTI_RADIO
         resources:
           en:
             text: I'm a...
             options: [Tenant, Landlord]
       EMPLOYMENT_SITUATION:
-        type: MULTI_DROPDOWN
+        type: MULTI_RADIO
         resources:
           en:
             text: Employment situation
@@ -74,7 +74,7 @@ maslow:
           en:
             text: Monthly income estimate
       RESIDENTIAL_SITUATION:
-        type: MULTI_DROPDOWN
+        type: MULTI_RADIO
         resources:
           en:
             text: Residential situation
@@ -95,7 +95,7 @@ maslow:
           en:
             text: How much rent I owe to date
       TENANT_ZIP_CODE:
-        type: NUMBER
+        type: ZIPCODE
         resources:
           en:
             text: Zip code
@@ -111,7 +111,7 @@ maslow:
                 Employment ID card,
               ]
       PROOF_OF_INCOME:
-        type: MULTI_DROPDOWN
+        type: MULTI_RADIO
         resources:
           en:
             text: Proof of income
@@ -122,13 +122,13 @@ maslow:
         resources:
           en:
             text: Tax form
-            options: [Filed 2020 IRS Form 1040/1040A, Option 2]
+            options: [Filed 2020 IRS Form 1040/1040A, Option 2, Option 3]
       PROOF_OF_RESIDENCE:
         type: MULTI_DROPDOWN
         resources:
           en:
             text: Proof of residence
-            options: [Filed 2020 IRS Form 1040/1040A, Option 2]
+            options: [Filed 2020 IRS Form 1040/1040A, Option 2, Option 3]
       RENT_DUE:
         type: MULTI_DROPDOWN
         resources:
@@ -136,19 +136,19 @@ maslow:
             text: Rent due
             options: [Lease agreement, Option 2]
       UNITS_OWNED:
-        type: MULTI_DROPDOWN
+        type: MULTI_RADIO
         resources:
           en:
             text: How many units do you own?
             options: [1-10 units, 11-50 units, Over 50 units]
       UNITS_PAYING_RENT:
-        type: MULTI_DROPDOWN
+        type: MULTI_RADIO
         resources:
           en:
             text: How many units pay rent each month?
             options: [1-10 units, 11-50 units, Over 50 units]
       LANDLORD_ZIP_CODE:
-        type: NUMBER
+        type: ZIPCODE
         resources:
           en:
             text: Zip code

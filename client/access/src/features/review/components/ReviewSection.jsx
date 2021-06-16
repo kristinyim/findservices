@@ -39,9 +39,15 @@ function ReviewSection(props) {
   // Displays the number entry either formatted as currency or a whole number.
   const displayNumber = (questionKey) => {
     const questionMetadata = questions[questionKey];
-    return questionMetadata.type === "CURRENCY"
-      ? currencyFormatter.format(responses[questionKey])
-      : numberFormatter.format(responses[questionKey]);
+    switch (questionMetadata.type) {
+      case "CURRENCY":
+        return currencyFormatter.format(responses[questionKey]);
+      case "ZIPCODE":
+        return responses[questionKey];
+      case "NUMBER":
+      default:
+        return numberFormatter.format(responses[questionKey]);
+    }
   };
 
   // Returns a list of the questions with corresponding responses.

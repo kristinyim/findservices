@@ -31,12 +31,18 @@ function NumberQuestion({ questionKey, questionType, value, onChange, error }) {
    * @returns {?{icon: string, iconPosition: "left"}}
    */
   const getIconProps = () => {
-    return (
-      questionType === "CURRENCY" && {
+    if (questionType === "CURRENCY") {
+      return {
         icon: "currency",
         iconPosition: "left",
-      }
-    );
+      };
+    } else if (questionType === "ZIPCODE") {
+      console.log("ZIPCODE!");
+      return {
+        icon: "map marker alternate",
+        iconPosition: "left",
+      };
+    }
   };
 
   // It's worth noting that we absolutely hammer the <Input> below with similar
