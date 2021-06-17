@@ -11,6 +11,10 @@ spring:
     embedded:
       version: 4.0.12
       features: NO_HTTP_INTERFACE_ARG,ONLY_WITH_SSL
+  security:
+    user:
+      name: admin
+      password: password
 
 server:
   forward-headers-strategy: native
