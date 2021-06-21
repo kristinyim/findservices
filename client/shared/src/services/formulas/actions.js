@@ -220,11 +220,15 @@ class EvaluatorInterpreter extends BaseCstVisitor {
           return sign * result;
         }
       } else {
-        throw Error(
-          "Errors detected!\n Unknown variable: '" +
-            String(ctx.Identifier[0].image) +
-            "'"
-        );
+        // This used to throw, which is not required anymore.
+        // Default values are just used for unanswered questions.
+        // If this changes, consider uncommenting the following `throw` block:
+        //
+        // throw Error(
+        //   "Errors detected!\n Unknown variable: '" +
+        //     String(ctx.Identifier[0].image) +  "'");
+        //
+        return 0;
       }
     }
   }

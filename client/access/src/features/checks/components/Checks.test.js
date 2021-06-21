@@ -176,9 +176,6 @@ describe("The Checks component", () => {
       // Service with formula with identifier error
       expect(card3).toHaveTextContent("VICTIM_COMP.name");
       expect(card3).toHaveTextContent("DOES_NOT_EXIST");
-      expect(card3).toHaveTextContent(
-        "Errors detected! Unknown variable: 'DOES_NOT_EXIST'"
-      );
     });
 
     it("renders card with invalid ranking", async () => {

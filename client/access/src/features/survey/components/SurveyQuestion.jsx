@@ -106,7 +106,7 @@ export class QuestionFactory {
 export default function SurveyQuestion(props) {
   const { error, questionKey, questionType } = props;
   const dispatch = useDispatch();
-  const response = useSelector((state) => selectResponse(state, questionKey));
+  var response = useSelector((state) => selectResponse(state, questionKey));
 
   const { Question, Converter } = QuestionFactory.create(questionType);
 
@@ -119,6 +119,14 @@ export default function SurveyQuestion(props) {
     }
     dispatch(clearReport());
   };
+
+  // This fixes incorrect dropdown behavior by setting a default value.
+  // It allows user to skip opening the list if the first option satisfies them.
+  // TODO: rework it properly by updating MultiQuestion.jsx
+  if (isNil(response) && questionType === "MULTI_DROPDOWN") {
+     response = 1;
+  }
+  dispatch(updateResponse({ [questionKey]: response }));
 
   return (
     <Question
