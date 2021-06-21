@@ -76,8 +76,7 @@ describe("summary section", () => {
     });
 
     it("renders headings", async () => {
-      const [step1, householdSection] = screen.getAllByRole("heading");
-      expect(step1).toHaveTextContent("review.step");
+      const [householdSection] = screen.getAllByRole("heading");
       expect(householdSection).toHaveTextContent("SECTION_HOUSEHOLD.title");
     });
 

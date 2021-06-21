@@ -52,11 +52,6 @@ describe("SurveySection", () => {
       ));
     });
 
-    it("shows progress indicator", async () => {
-      const progress = screen.getByRole("status");
-      expect(progress).toHaveTextContent("survey.actions.step");
-    });
-
     it("shows appropriate heading for step", async () => {
       const section = options.state.survey[step - 1];
       const [sectionKey] = _(section).entries().first();

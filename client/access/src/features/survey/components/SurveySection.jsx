@@ -10,6 +10,7 @@ import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { Form, Header, Ref } from "semantic-ui-react";
 import { sendPageViewEvent } from "util/analytics";
+import { ProgressBar } from "maslow-shared";
 
 /**
  * Renders a single section (or step) of the survey.
@@ -43,9 +44,7 @@ function SurveySection({ step, survey, error }) {
   return (
     <Fragment>
       <SetTitle title={`${translatedTitle}: ${translatedStep}`} />
-      <div role="status" className={styles.progress}>
-        {translatedStep}
-      </div>
+      <ProgressBar fillFirst={true} fillSecond={step > 1} fillThird={false} />
       <Form>
         {/* NOTE: The Ref copmonent is eventually going to be deprecated in
         favor of React.forwardRef, but for now this is the only option 

@@ -95,9 +95,6 @@ function ReviewSection(props) {
 
   return (
     <>
-      <h2 className={styles.step}>
-        {t("review.step", { step: pageNumberFromSection(sectionKey) })}
-      </h2>
       <Header as="h2" className={styles.header}>
         {t(`catalog:${sectionKey}.title`)}
         <Link

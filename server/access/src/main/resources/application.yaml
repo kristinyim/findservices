@@ -30,7 +30,7 @@ maslow:
       SECTION_IAMA:
         resources:
           en:
-            title: "Rental Assitance Tool"
+            title: "Rental Assistance Tool"
       SECTION_TENANT_SITUATION:
         type: TENANT
         resources:

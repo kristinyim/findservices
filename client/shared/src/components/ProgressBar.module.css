@@ -1,0 +1,21 @@
+.filled {
+  float: left;
+  width: 30%;
+  height: 2.5em;
+  margin: 1%;
+  padding: 0.75em 2.2em;
+  text-transform: none;
+  background-color: #d8b23a;
+  border-radius: 0;
+}
+
+.unfilled {
+  float: left;
+  width: 30%;
+  height: 2.5em;
+  margin: 1%;
+  padding: 0.75em 2.2em;
+  text-transform: none;
+  background-color: #454545;
+  border-radius: 0;
+}

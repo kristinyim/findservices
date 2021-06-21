@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import { Button, Divider, Header } from "semantic-ui-react";
 import { sendPageViewEvent } from "util/analytics";
 import AppLayout from "components/AppLayout";
+import { ProgressBar } from "maslow-shared";
 import _ from "lodash";
 import {
   isLandlordSection,
@@ -47,6 +48,7 @@ function Review() {
 
   return (
     <AppLayout>
+      <ProgressBar fillFirst={true} fillSecond={true} fillThird={true} />
       <SetTitle title={t("review.htmlTitle")} />
       <Header as="h1">{t("review.title")}</Header>
       {sections.map((section) => {

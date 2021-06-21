@@ -37,7 +37,6 @@ function NumberQuestion({ questionKey, questionType, value, onChange, error }) {
         iconPosition: "left",
       };
     } else if (questionType === "ZIPCODE") {
-      console.log("ZIPCODE!");
       return {
         icon: "map marker alternate",
         iconPosition: "left",
